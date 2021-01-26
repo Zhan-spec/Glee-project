@@ -1,0 +1,121 @@
+.header {
+  padding: 45px 0;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 33px;
+  }
+
+  &__link {
+    @extend %rubik-500;
+    padding: 0 2px 1px;
+    color: $color-menu;
+    font-size: 15px;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: color 0.5s, border-bottom 0.5s;
+
+    &:hover {
+      @extend %rubik-700;
+      color: $color-text-hover;
+      border-bottom: 1px solid $color-text-hover;
+    }
+
+    &--active {
+      @extend %rubik-700;
+      color: $color-text-hover;
+      border-bottom: 1px solid $color-text-hover;
+    }
+
+    &-plus:after {
+      content: '+';
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: -3px;
+      right: -10px;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    &-choose {
+      border-radius: 25px;
+      background-color: $bgc-block-slide;
+      width: 178px;
+      height: 51px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    position: relative;
+
+    &-search {
+      background-color: rgb(163, 187, 200);
+      opacity: 0.2;
+    }
+
+    &-dots {
+      background-color: rgb(163, 187, 200);
+    }
+  }
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    @extend %dmsans-400;
+    font-size: 10px;
+    color: rgb(36, 63, 77);
+    line-height: 2.7;
+    position: absolute;
+    top: 9px;
+    right: 7px;
+  }
+
+  &__devider {
+    display: block;
+    width: 1px;
+    height: 32px;
+    background-color: #fde7d3;
+  }
+}

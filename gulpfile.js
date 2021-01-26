@@ -22,7 +22,7 @@ function styles() {
     .pipe(scss({outputStyle: 'compressed'}))  /* expanded | compressed */
     .pipe(concat('style.min.css'))  /* указываем название файла после конвератции */
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions'],
+      overrideBrowserslist: ['last 2 versions'],
       grid: true
     }))
     .pipe(dest('src/css'))   /* путь для выходного файла style.css*/
@@ -33,6 +33,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'src/js/main.js'
   ])
   .pipe(concat('main.min.js'))

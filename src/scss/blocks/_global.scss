@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1.7;
+  @extend %rubik-400;
+  color: $color-text-default;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  display: block;
+}
+
+.address {
+  font-style: normal;
+}
+
+.btn {
+  padding: 14px 17px;
+  background-color: $bgc-btn;
+  @extend %dmsans-400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  border: none;
+  outline-color: transparent;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: $bgc-btn-hover;
+  color: $color-text-default;
+}
