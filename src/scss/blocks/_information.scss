@@ -1,0 +1,23 @@
+.information {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bgc-block;
+    
+  }
+  &__item {
+    width: 33.33%;
+    padding: 45px 150px;
+  }
+  &__item:not(:last-child) { 
+    border-right: 1px solid #e8e4df;
+  }
+  &__title{
+    margin-left: 80px;
+  }
+  &__text {
+    max-width: 210px;
+    margin-left: 80px;
+  }
+}

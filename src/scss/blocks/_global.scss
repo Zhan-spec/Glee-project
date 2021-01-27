@@ -17,10 +17,13 @@ body {
   flex-grow: 1;
 }
 
-.container {
+.container {  
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  &__big {
+    max-width: 1800px;
+  }
 }
 
 .logo {
