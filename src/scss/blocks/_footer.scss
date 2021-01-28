@@ -1,0 +1,91 @@
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 75px 0 70px;
+  border-bottom: 1px solid #dae4e9;
+
+  &__contact {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  &__nav {
+    width: 145px;
+    margin-right: 155px;
+  }
+
+  &__item-form {
+    max-width: 270px;
+    width: 100%;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    color: $color-footer-title;
+    font-size: 16px;
+    line-height: 2.8;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__form-input {
+    max-width: 170px;
+    width: 100%;
+    background-color: $bgc-block;
+    border: none;
+    padding: 12px 10px 12px 15px;
+
+    &::placeholder {
+      color: #234969;
+      font-size: 12px;
+    }
+  }
+
+  &__form-btn {
+    padding: 13px 15px;
+  }
+}
+
+.address {
+
+  &__addr,
+  &__phone,
+  &__email {
+    display: block;
+    margin-bottom: 17px;
+  }
+}
+
+.footer-bottom {
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    padding: 5px 14px;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 0;
+    border-left: 1px solid #7b7b7b;
+  }
+
+  &__item:last-child {
+    padding-right: 0;
+  }
+}

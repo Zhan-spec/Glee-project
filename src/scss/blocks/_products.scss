@@ -1,0 +1,130 @@
+.products {
+  padding: 70px 0;
+  background-color: $bgc-products;
+
+  &__title {
+    font-style: 36px;
+    line-height: 1;
+    color: #191919;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__filter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $color-title-products;
+    line-height: 1.2;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    cursor: pointer;
+    transition: color 0.5s;
+
+    &:hover,
+    &--active {
+      color: $color-title-products-hover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    height: 380px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 38px;
+    background-color: #fff;
+    border-radius: 7px/5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    @extend %dmsans-500;
+    color: $color-title;
+    line-height: 2.5;
+    text-align: center;
+    margin-bottom: -7px;
+  }
+
+  &__img {
+    margin: 25px auto 50px;
+    flex-grow: 1;
+  }
+
+  &__price {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $color-products-price;
+    line-height: 2.5;
+    text-align: center;
+  }
+
+  &__user-nav {
+    width: 168px;
+    height: 46px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 167px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__user-nav-item:not(:first-child) {
+    margin-left: 12px;
+  }
+
+
+  &__user-nav-link {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  &__user-nav-link path {
+    fill: $color-user-nav-link;
+    transition: fill 0.5s;
+  }
+
+  &__user-nav-link:hover {
+    background-color: $color-user-nav-link;
+  }
+
+  &__user-nav-link:hover path {
+    fill: $color-user-nav-link-hover;
+  }
+
+  &__item:hover &__user-nav {
+    display: flex;
+  }
+}
+
+.mixitup-control-active {
+  color: $color-title-products-hover;
+}
