@@ -14,6 +14,6 @@ $(function() {
     fade: true
   });
 
-
+  var mixer = mixitup('.products__content');
 
 });

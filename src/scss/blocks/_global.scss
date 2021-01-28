@@ -17,10 +17,11 @@ body {
   flex-grow: 1;
 }
 
-.container {  
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
   &__big {
     max-width: 1800px;
   }
@@ -50,4 +51,9 @@ body {
 .btn:hover {
   background-color: $bgc-btn-hover;
   color: $color-text-default;
+}
+
+.title {
+  @extend %dmsans-700;
+  color: $color-title;
 }

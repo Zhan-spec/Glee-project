@@ -4,20 +4,64 @@
     justify-content: space-between;
     align-items: center;
     background-color: $bgc-block;
-    
+
   }
+
   &__item {
     width: 33.33%;
+    height: 168px;
     padding: 45px 150px;
+    position: relative;
   }
-  &__item:not(:last-child) { 
+
+  &__item:not(:last-child) {
     border-right: 1px solid #e8e4df;
   }
-  &__title{
-    margin-left: 80px;
+
+  &__box {
+    max-width: 315px;
+    width: 100%;
+    position: relative;
   }
-  &__text {
-    max-width: 210px;
+
+  &__box-support,
+  &__box-delivery,
+  &__box-card {
+    background-repeat: no-repeat;
+    background-position: left 10px;
+  }
+
+  &__box-support {
+    background-image: url('../../images/icons/icon-support.svg');
+  }
+
+  &__box-delivery {
+    background-image: url('../../images/icons/icon-truck.svg');
+
+    .information__text {
+      max-width: 215px;
+    }
+  }
+
+  &__box-card {
+    background-image: url('../../images/icons/icon-card.svg');
+  }
+
+  &__title {
     margin-left: 80px;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: $color-title-information;
+  }
+
+  &__text {
+    max-width: 205px;
+    width: 100%;
+    margin-left: 80px;
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #585858;
   }
 }
