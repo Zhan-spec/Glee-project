@@ -1,21 +1,22 @@
-.top-slider {
+.top-slider {  
   &__inner {
     background-color: $bgc-block-slide;
-    padding: 100px 170px 80px 300px;
+    padding: 100px 170px 80px 300px;    
   }
 
   &__item {
-    max-width: 1300px;
+    // max-width: 1300px;
     width: 100%;
-    height: 640px;
+    // height: 640px;
     display: flex !important;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
 
   &__content {
     max-width: 470px;
-    padding-top: 125px;
-    margin-right: 30px;
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
 
   &__title {
@@ -24,6 +25,8 @@
     @extend %rubik-500;
     color: $color-title;
     margin-bottom: 40px;
+    text-transform: uppercase;
+    @include line-clamp(2);
   }
 
   &__text {
@@ -32,53 +35,71 @@
     font-size: 18px;
     line-height: 1.7;
     color: $color-menu;
+    @include line-clamp(3);
   }
 
   &__link {
-    padding: 20px 100px 20px 25px;
+    padding: 20px 55px 20px 25px;
     @extend %rubik-500;
-    background-image: url('../../images/icons/icon-arr-right.svg');
-    background-repeat: no-repeat;
-    background-position: 145px 26px;
+    position: relative;
 
+    &:after {
+      content: url('../images/icons/icon-arr-right.svg');
+      width: 22px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-9px);
+      right: 17px;
+    }
   }
 
   &__wrap-img {
-    background-image: url('../../images/top-slider/bg-img.png');
+    background-image: url('../images/top-slider/bg-img.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
     display: flex;
     align-items: center;
+    max-width: 640px;
+    //width: 100%;
+    max-height: 264px;
   }
 
   &__img {
     margin-left: -100px;
   }
-}
 
-.slick-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  li {
-    button {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: none;
-      background-color: rgba(255, 255, 255, 0.3);
-      outline: transparent;
-    }
-
-    &:not(:first-child) {
-      margin-left: 12px;
-    }
-
-    &.slick-active {
+    li {
       button {
-        background-color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        outline: transparent;
+        cursor: pointer;
+        transform: background-color 0.5s;
+
+        &:hover {
+          background-color: #ccc;
+          transform: scale(1.2);
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
       }
     }
   }

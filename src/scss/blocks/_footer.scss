@@ -1,27 +1,36 @@
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 75px 0 70px;
-  border-bottom: 1px solid #dae4e9;
+.footer {
+  padding: 80px 0 35px;
+  font-size: 14px;
 
-  &__contact {
-    width: 200px;
-    margin-right: 100px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #dae4e9;
   }
 
-  &__nav {
-    width: 145px;
-    margin-right: 155px;
-  }
+  &__col {
+    &--contact {
+      max-width: 200px;
+      width: 100%;
+      margin-right: 100px;
+    }
 
-  &__item-form {
-    max-width: 270px;
-    width: 100%;
+    &__col--form {
+      max-width: 270px;
+      width: 100%;
+    }
+
   }
 
   &__logo {
     display: block;
     margin-bottom: 25px;
+  }
+
+  &__nav {
+    width: 145px;
+    margin-right: 155px;
   }
 
   &__title {
@@ -36,56 +45,87 @@
   &__link {
     display: block;
     margin-bottom: 14px;
+
+    &:hover {
+      color: #000;
+    }
   }
 
   &__text {
     margin-bottom: 32px;
   }
 
-  &__form-input {
-    max-width: 170px;
-    width: 100%;
-    background-color: $bgc-block;
-    border: none;
-    padding: 12px 10px 12px 15px;
+  &__form {
+    &--input {
+      max-width: 170px;
+      width: 100%;
+      background-color: $bgc-block;
+      border: none;
+      padding: 11px 10px 11px 15px;
+      border-bottom: 2px solid transparent;
+      margin-right: -5px;
 
-    &::placeholder {
-      color: #234969;
-      font-size: 12px;
+      &::placeholder {
+        color: #234969;
+        font-size: 12px;
+      }
+
+      &:focus {
+        border-bottom: 2px solid #000;
+        outline: transparent;
+      }
+    }
+
+    &--btn {
+      padding: 13px 15px;
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &:focus {
+        outline: 1px solid #ccc;
+      }
     }
   }
 
-  &__form-btn {
-    padding: 13px 15px;
-  }
-}
-
-.address {
-
-  &__addr,
-  &__phone,
-  &__email {
-    display: block;
-    margin-bottom: 17px;
-  }
-}
-
-.footer-bottom {
-  height: 92px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__item {
-    padding: 5px 14px;
+  &__bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__item:not(:first-child) {
-    margin-left: 0;
-    border-left: 1px solid #7b7b7b;
-  }
+  &__menu {
 
-  &__item:last-child {
-    padding-right: 0;
+    .menu {
+      &__link {
+        padding: 5px 14px;
+        display: block;
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+      &__item {
+        position: relative;
+
+        &:not(:last-child) {
+          margin-right: 0;
+
+          &::after {
+            content: '';
+            width: 1px;
+            height: 16px;
+            background-color: #7b7b7b;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+          }
+        }
+      }
+    }
   }
 }

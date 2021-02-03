@@ -1,16 +1,11 @@
 @import 'base/reset';
 @import 'base/mixins';
 @import 'base/variables';
-@import 'blocks/fonts';
-@import 'blocks/libs';
-@import 'blocks/global';
+@import 'base/fonts';
+@import 'base/libs';
+@import 'base/global';
 @import 'blocks/header';
 @import 'blocks/footer';
 @import 'blocks/top-slider';
-@import 'blocks/information';
-@import 'blocks/products';
-
-
-
-
-@import 'blocks/media';
+@import 'blocks/info-products';
+@import 'blocks/product-card';
