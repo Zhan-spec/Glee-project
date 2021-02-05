@@ -1,8 +1,7 @@
-.design-video {
-  padding: 100px 0 110px;
-}
-
 .design {
+  padding: 100px 0 0;
+  margin-bottom: 110px;
+
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -13,7 +12,7 @@
   &__item {
     max-width: 370px;
     width: 100%;
-    max-height: 245px;   
+    max-height: 245px;
   }
 
   &__title {
@@ -22,6 +21,24 @@
 
   &__mixitup-nav {
     margin-bottom: 110px;
+  }
+
+}
+
+.video {
+  max-width: 1920px;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  &__inner {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
