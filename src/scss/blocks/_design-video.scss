@@ -1,0 +1,27 @@
+.design-video {
+  padding: 100px 0 110px;
+}
+
+.design {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 40px 30px;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    max-height: 245px;   
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__mixitup-nav {
+    margin-bottom: 110px;
+  }
+
+}

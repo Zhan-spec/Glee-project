@@ -64,6 +64,7 @@ body {
 .title {
   @extend %dmsans-700;
   color: $color-title;
+  text-align: center;
 }
 
 .mixitup-nav {

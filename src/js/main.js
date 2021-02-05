@@ -16,4 +16,7 @@ $(function() {
 
   var mixer = mixitup('.products__content');
 
+  var mixer2 = mixitup('.design__items');
+  
+
 });

@@ -1,0 +1,23 @@
+.design-card {
+  max-width: 370px;
+  width: 100%;
+  height: 245px;
+  padding-top: 45px;
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  &__title{
+    max-width: 180px;
+    margin-bottom: 20px;
+    color: #191919;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  &__type {
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
