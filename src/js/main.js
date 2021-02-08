@@ -18,5 +18,13 @@ $(function() {
 
   var mixer2 = mixitup('.design__items');
   
+  $('.partners-slider').slick({
+    //arrows: true,  
+    dots: true,  
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1
+    //fade: true
+  });
 
 });
