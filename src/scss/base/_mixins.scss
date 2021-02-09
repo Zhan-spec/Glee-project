@@ -1,5 +1,4 @@
-@mixin line-clamp($num-row) {
-  //display: block;
+@mixin line-clamp($num-row) {  
   display: -webkit-box;  
   -webkit-line-clamp: $num-row;
   -webkit-box-orient: vertical;

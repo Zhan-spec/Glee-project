@@ -30,8 +30,6 @@
     @extend %poppins-700;
     color: #fff;
     background-color: #a3bbc8;
-    // width: 106px;
-    // height: 30px;
     border-radius: 16px;
     padding: 10px 40px;
     font-size: 14px;
@@ -63,7 +61,6 @@
   &__info {
     border-top: 1px solid #e0e0e0;
     display: flex;
-    // justify-content: space-between;
     padding-left: 7px;
     padding-top: 20px;
   }
@@ -109,7 +106,4 @@
       }
     }
   }
-
-
-
 }

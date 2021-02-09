@@ -59,7 +59,6 @@
 .products {
   padding: 70px 0;
   margin-bottom: 190px;
-  // background-color: $bgc-products;
 
   &__title {
     font-style: 36px;
@@ -69,34 +68,9 @@
     margin-bottom: 35px;
   }
 
-  // &__filter-btn {
-  //   // display: flex;
-  //   // justify-content: center;
-  //   // align-items: center;
-  //   margin-bottom: 80px;
-  // }
-
   &__mixitup-nav {
     margin-bottom: 80px;
   }
-
-  // &__btn {
-  //   font-size: 16px;
-  //   @extend %dmsans-700;
-  //   color: $color-title-products;
-  //   line-height: 1.2;
-  //   text-align: center;
-  //   background-color: transparent;
-  //   border: none;
-  //   outline: transparent;
-  //   cursor: pointer;
-  //   transition: color 0.5s;
-
-  //   &:hover,
-  //   &--active {
-  //     color: $color-title-products-hover;
-  //   }
-  //}
 
   &__content {
     display: flex;
@@ -124,8 +98,8 @@
   &__items {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    
+    align-items: center;
+
   }
 
   &__item {
@@ -134,12 +108,12 @@
     width: 100%;
     height: 390px;
     padding: 100px 100px 100px 400px;
-    
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
     position: relative;
-    
+
 
     &:first-child::before {
       content: '';
@@ -182,12 +156,12 @@
     @extend %rubik-500;
     font-size: 15px;
     line-height: 1;
-    color: #436372;     
-    border: 1px solid #b3b7b5; 
+    color: #436372;
+    border: 1px solid #b3b7b5;
     border-radius: 5px;
     background-color: rgba(36, 63, 77, 0);
     opacity: 0.4;
-    
+
     position: relative;
 
     &:after {
@@ -202,7 +176,7 @@
     }
 
     &:hover {
-      background-color: #ccc;     
+      background-color: #ccc;
     }
 
     &:focus {
