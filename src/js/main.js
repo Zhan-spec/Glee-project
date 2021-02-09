@@ -14,17 +14,27 @@ $(function() {
     fade: true
   });
 
-  var mixer = mixitup('.products__content');
-
-  var mixer2 = mixitup('.design__items');
+  
   
   $('.partners-slider').slick({
-    //arrows: true,  
-    dots: true,  
+    arrows: false,      
     infinite: true,
     slidesToShow: 5,
-    slidesToScroll: 1
-    //fade: true
+    slidesToScroll: 2
   });
 
+  
+  var containerEl1 = document.querySelector('[data-ref="products__mixitup"]');
+  var containerEl2 = document.querySelector('[data-ref="design__mixitup"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+ 
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
+
+  
 });

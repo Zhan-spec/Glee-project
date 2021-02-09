@@ -15,7 +15,7 @@ $color-title-products-hover: #191919;
 // $bgc-products: #fefefe;
 $color-user-nav-link: #a3bbc8;
 $color-user-nav-link-hover: #fff;
-
+$color-title-link-hover: #999999;
 
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
@@ -52,19 +52,20 @@ $color-user-nav-link-hover: #fff;
   font-weight: 700;
 }
 
-// %transition-link {
-//   transition: color 0.5s, font-weight 0.5s;
-// }
-
-// %transition-link-props {
-//   color: #000;
-//   font-weight: 500;
-// }
-
-
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
+}
+
+%text-shadow {
+  text-shadow: 1px 1px 1px #000;
+}
+
+%link-hover {
+  color: #999;
+  background-color: #ccc;
+  border-color: #ccc;
 }
