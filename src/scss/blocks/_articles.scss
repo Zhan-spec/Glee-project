@@ -1,8 +1,6 @@
-.articles-partners {
-  padding: 50px 0 50px;
-}
-
 .articles {
+  padding: 50px 0 0;
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -48,34 +46,10 @@
     display: flex;
     flex-direction: column;
   }
-}
 
-.partners {
-  background-color: #fef7f0;
-  padding-top: 250px;
-  margin-top: -185px;
-  padding-bottom: 85px;
-}
-
-.partners-slider {
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 20px 0 0;
-  }
-
-  &__link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-
-    img {
-      object-fit: cover;
-      margin: 0 auto;
-    }
+  &__bg {
+    background-color: #fef7f0;
+    padding-top: 183px;
+    margin-top: -183px;
   }
 }
