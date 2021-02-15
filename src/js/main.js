@@ -20,7 +20,7 @@ $(function() {
     arrows: false,      
     infinite: true,
     slidesToShow: 5,
-    slidesToScroll: 2
+    slidesToScroll: 5
   });
 
   

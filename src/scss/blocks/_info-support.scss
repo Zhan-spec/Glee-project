@@ -1,0 +1,58 @@
+.info-support {
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    background-color: $bgc-block;
+
+  }
+
+  &__item {
+    width: 33.33%;
+    padding: 37px 147px;
+    position: relative;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+    }
+  }
+
+  &__box {
+    max-width: 315px;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: left 10px;
+
+
+    &--support {
+      background-image: url('../images/icons/icon-support.svg');
+    }
+
+    &--delivery {
+      background-image: url('../images/icons/icon-truck.svg');
+      background-position: -8px 22px;
+    }
+
+    &--card {
+      background-image: url('../images/icons/icon-card.svg');
+    }
+  }
+
+  &__title {
+    margin-left: 80px;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: $color-title-information;
+  }
+
+  &__text {
+    max-width: 215px;
+    width: 100%;
+    margin-left: 80px;
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #585858;
+  }
+}

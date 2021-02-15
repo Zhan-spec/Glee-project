@@ -2,22 +2,34 @@
   max-width: 370px;
   width: 100%;
   height: 245px;
-  padding-top: 45px;
-  padding-left: 35px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  position: relative;
+  border: 1px solid transparent;
+  transition: transform 0.5s border-color 0.5s;
+
+  &__link-title {
+    position: absolute;
+    top: 40px;
+    left: 35px;
+  }
 
   &__title {
     max-width: 180px;
     margin-bottom: 20px;
-    color: #191919;
+    color: $color-title-products-hover;
     font-size: 20px;
     line-height: 1.2;
   }
 
   &__type {
+    position: absolute;
+    top: 100px;
+    left: 35px;
     @extend %dmsans-700;
     color: #a3bbc8;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    border-color: #ccc;
   }
 }

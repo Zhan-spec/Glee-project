@@ -6,7 +6,7 @@ body {
 body {
   background-color: #fff;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.4;
   @extend %rubik-400;
   color: $color-text-default;
   display: flex;
@@ -41,6 +41,10 @@ body {
 
 .logo {
   display: block;
+
+  &__img {
+    object-fit: contain;
+  }
 }
 
 .btn {
@@ -65,12 +69,18 @@ body {
   @extend %dmsans-700;
   color: $color-title;
   text-align: center;
+  font-size: 36px;
+  line-height: 1.4;
 }
 
 .mixitup-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 18px;
+  }
 
   &__btn {
     font-size: 16px;
@@ -85,7 +95,8 @@ body {
     transition: color 0.5s;
 
     &:hover,
-    &--active {
+    &:focus,
+    &:active {
       color: $color-title-products-hover;
     }
   }
@@ -94,10 +105,14 @@ body {
 .address {
   &__item {
     display: block;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 
     &:hover {
       color: #000;
+    }
+
+    span {
+      text-transform: uppercase;
     }
   }
 }

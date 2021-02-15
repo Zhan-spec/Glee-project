@@ -7,6 +7,8 @@ $bgc-block-slide: #fcd7b6;
 $bgc-btn: #a3bbc8;
 $bgc-btn-hover: #459ece;
 $color-text-hover: #000;
+$color-text-active: #ссс;
+$color-text-focus: #111;
 $color-footer-title: #1f2044;
 $color-title-information: #414141;
 $color-title-products: #8b8b8b;
@@ -14,8 +16,14 @@ $color-products-price: #a3bbc8;
 $color-title-products-hover: #191919;
 $color-user-nav-link: #a3bbc8;
 $color-user-nav-link-hover: #fff;
-$color-title-link-hover: #999999;
+$color-title-link-hover: #000;
+$color-title-link-active: #7b7b7b;
+$color-title-link-focus: #459ece;
+
 $color-text-form: #436372;
+$color-icon-product: #a3bbc8;
+$color-icon-fill: #243f4d;
+
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
@@ -65,12 +73,23 @@ $color-text-form: #436372;
   @return m#{i}n(#{$numbers});
 }
 
-%text-shadow {
-  text-shadow: 1px 1px 1px #000;
+%link-hover {
+  color: $color-text-hover;
+  background-color: #ccc;
+  border-color: #000;
 }
 
-%link-hover {
-  color: #999;
+%link-active {  
+  color: $color-text-active;
   background-color: #ccc;
-  border-color: #ccc;
+  border-color: $color-text-default;
 }
+
+%link-focus {
+  color: $color-text-focus;
+  background-color: #ccc;
+  border-color: $color-default;
+}
+
+
+

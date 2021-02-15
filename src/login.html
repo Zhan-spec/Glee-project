@@ -97,16 +97,16 @@
         <form class="modal__form" action="#">
           <label class="modal__label">
             Username or email address *
-            <input class="modal__input" type="text" required>
+            <input class="modal__input" type="text" name="usernameEmail" required>
           </label>
           <label class="modal__label">
             Password *
-            <input class="modal__input" type="password" required>
+            <input class="modal__input" type="password" name="password" required>
           </label>
-          <button class="modal__btn modal__btn--login">Login</button>
+          <button class="modal__btn modal__btn-login">Login</button>
           <div class="modal__box">
             <label class="modal__label">
-              <input type="checkbox">
+              <input type="checkbox" name="rememberMe">
               Remember me
             </label>
             <a class="modal__error" href="#">
@@ -116,7 +116,7 @@
           <p class="modal__text">
             Not registered? No problem
           </p>
-          <button class="modal__btn modal__btn--account">Create an account</button>
+          <button class="modal__btn modal__btn-account">Create an account</button>
         </form>
       </div>
     </section>

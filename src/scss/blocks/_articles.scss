@@ -16,22 +16,23 @@
   &__link {
     color: #262626;
     font-size: 16px;
+    padding-top: 13px;
     @extend %dmsans-700;
     padding-right: 25px;
     position: relative;
-
+    transition: text-shadow 0.5s;
     &::after {
       content: '';
       width: 6px;
       height: 11px;
       background-image: url('../images/icons/icon-to-right.svg');
       position: absolute;
-      top: 7px;
-      right: 5px;
+      top: 20px;
+      right: 3px;
     }
 
     &:hover {
-      @extend %text-shadow;
+      text-shadow: 1px 1px 1px #000;
     }
   }
 
@@ -45,6 +46,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   }
 
   &__bg {
