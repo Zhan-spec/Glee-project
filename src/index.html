@@ -23,28 +23,31 @@
           <img class="logo__img" src="images/logo.png" width="146" height="39" alt="Logo">
         </a>
         <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
+          <ul class="menu__list menu__list--header">
+            <li class="menu__item menu__item--header">
               <a class="menu__link menu__link--active" href="#">
                 Home<span>+</span>
               </a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--header">
               <a class="menu__link" href="#">About</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--header">
               <a class="menu__link" href="#">Services</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--header">
               <a class="menu__link" href="#">Pages<span>+</span></a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--header">
               <a class="menu__link" href="#">News</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--header">
               <a class="menu__link" href="#">Contact</a>
             </li>
           </ul>
+          <button class="menu__btn">
+            <span></span>
+          </button>
         </nav>
 
         <div class="user-nav">
@@ -69,7 +72,7 @@
   </header>
 
   <main class="main">
-
+<!-- 
     <section class="top-slider">
       <h2 class="sr-only">Glee - Smart and trendy</h2>
       <div class="container container--big">
@@ -221,13 +224,6 @@
                   </ul>
                 </div>
                 <h3 class="product-card__title">
-                  Wooden radio
-                  Wooden radio
-                  Wooden radio
-                  Wooden radio
-                  Wooden radio
-                  Wooden radio
-                  Wooden radio
                   Wooden radio
                 </h3>
                 <p class="product-card__price">
@@ -511,19 +507,11 @@
             <div class="promo-card__content">
               <h3 class="title promo__title">
                 Mirum Notare Tellus
-                <!-- Mirum Notare Tellus
-                Mirum Notare Tellus -->
               </h3>
               <div class="promo__text">
                 <p>
                   LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                 </p>
-                <!-- <p>
-                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-                </p>
-                <p>
-                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-                </p> -->
               </div>
               <a class="btn promo__link" href="#">
                 View more
@@ -549,15 +537,6 @@
               </a>
             </div>
           </article>
-          <!-- <article class="promo__item" style="background-image: url('images/lamp2.png');">
-            <h3 class="title promo__title">Malesuada Tempor Euismod</h3>
-            <p class="promo__text">
-              50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-            </p>
-            <a class="btn promo__link" href="#">
-              View more
-            </a>
-          </article> -->
         </div>
       </div>
     </div>
@@ -577,14 +556,6 @@
 
           <ul class="design__items">
             <li class="design__item mix category-a">
-              <!-- <article class="design-card" style="background-image: url('images/content/design/photo1.jpg');">
-                <h3 class="design-card__title">
-                  Beat Flat Pendant Black
-                </h3>
-                <p class="design-card__type">
-                  Classic
-                </p>
-              </article> -->
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img src="images/content/design/photo1.jpg" alt="Design item's photo">
@@ -832,9 +803,9 @@
         </ul>
       </div>
     </div>
-
-  </main>
-
+-->
+  </main> 
+ 
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
@@ -862,7 +833,7 @@
           </address>
         </div>
         <div class="footer__col footer__col--nav">
-          <p class="footer__title">Services</p>
+          <p class="footer__title footer__title--nav">Services</p>
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">About us</a>
@@ -882,7 +853,7 @@
           </ul>
         </div>
         <div class="footer__col footer__col--nav">
-          <p class="footer__title">Account</p>
+          <p class="footer__title footer__title--nav">Account</p>
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">Your Account</a>
@@ -916,18 +887,18 @@
           ©2020 CopyRight Example. All rights reserved.
         </p>
         <nav class="menu footer__menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Home</a>
+          <ul class="menu__list menu__list--footer">
+            <li class="menu__item menu__item--footer">
+              <a class="menu__link menu__link--footer" href="#">Home</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
+            <li class="menu__item menu__item--footer">
+              <a class="menu__link menu__link--footer" href="#">About</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Blog</a>
+            <li class="menu__item menu__item--footer">
+              <a class="menu__link menu__link--footer" href="#">Blog</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
+            <li class="menu__item menu__item--footer">
+              <a class="menu__link menu__link--footer" href="#">Contact</a>
             </li>
           </ul>
         </nav>

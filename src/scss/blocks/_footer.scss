@@ -5,28 +5,78 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 55px;
     border-bottom: 1px solid #dae4e9;
+
+    @media (max-width: 400px) {
+      display: block;
+    }
+
   }
 
-  &__col {    
+  &__col {
     &--contact {
       max-width: 200px;
       width: 100%;
       margin-right: 100px;
+
+      @media (max-width: 1200px) {
+        margin-right: 50px;
+      }
+
+      @media (max-width: 960px) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: 550px) {
+        max-width: 100%;
+        margin-right: 0;
+      }
+
     }
 
     &--form {
       max-width: 270px;
       width: 100%;
       padding-top: 5px;
+
+      @media (max-width: 960px) {
+        max-width: 100%;
+
+        .footer__title {
+          margin-bottom: 0;
+        }
+
+      }
+
+
     }
 
     &--nav {
       width: 145px;
       margin-right: 155px;
       padding-top: 5px;
+
+      @media (max-width: 1200px) {
+        margin-right: 50px;
+      }
+
+      @media (max-width: 960px) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: 400px) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+
+
     }
+
+
+
   }
 
   &__logo {
@@ -34,13 +84,35 @@
     margin-bottom: 27px;
   }
 
-    &__title {
+  &__title {
     @extend %dmsans-700;
     color: $color-footer-title;
     font-size: 16px;
     line-height: 2.8;
     text-transform: uppercase;
     margin-bottom: 7px;
+
+    @media (max-width: 550px) {
+      margin-bottom: 0;
+      line-height: 1.8;
+    }
+
+    &--nav {
+      @media (max-width: 400px) {
+        width: 100%;
+        text-align: center;
+
+      }
+
+    }
+
+  }
+
+  &__item {
+
+    @media (max-width: 400px) {
+      text-align: center;
+    }
   }
 
   &__link {
@@ -51,7 +123,7 @@
     &:focus {
       color: $color-title-link-focus;
     }
-    
+
     &:hover {
       color: $color-title-link-hover;
     }
@@ -59,10 +131,25 @@
     &:active {
       color: $color-title-link-active;
     }
+
+    @media (max-width: 550px) {
+      margin-bottom: 8px;
+
+    }
+
+    @media (max-width: 400px) {
+      padding: 5px 0;
+    }
+
   }
 
   &__text {
     margin-bottom: 40px;
+
+    @media (max-width: 960px) {
+      margin-bottom: 10px;
+    }
+
   }
 
   &__form-input {
@@ -72,7 +159,8 @@
     border: none;
     padding: 11px 10px 11px 15px;
     border-bottom: 2px solid transparent;
-    outline: 1px solid transparent;;
+    outline: 1px solid transparent;
+    ;
     margin-right: -5px;
     transition: color 0.5s border-bottom 0.5s outline 0.5s;
 
@@ -90,7 +178,17 @@
     &:hover,
     &:active {
       outline-color: #ccc;
-    }    
+    }
+
+    @media (max-width: 960px) {
+      max-width: 240px;
+    }
+
+    @media (max-width: 550px) {
+      max-width: 100%;
+    }
+
+
   }
 
   &__form-btn {
@@ -103,7 +201,11 @@
     &:hover,
     &:active {
       background-color: #ccc;
-    }    
+    }
+
+    @media (max-width: 550px) {
+      width: 100%;
+    }
   }
 
   &__bottom {
@@ -111,38 +213,69 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__menu {
 
-    .menu {
-      &__link {
-        padding: 10px 11px;
-        display: block;
+    @media (max-width: 600px) {
+      margin-bottom: 25px;
+    }
 
-        &:hover {
-          color: #000;
+    .menu {
+      &__list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__link {
+        &--footer {
+          padding: 10px 11px;
+          display: block;
+
+          &:hover {
+            color: #000;
+          }
+
         }
       }
 
       &__item {
-        position: relative;
+        &--footer {
+          position: relative;
 
-        &:not(:last-child) {
-          margin-right: 0;
+          &:not(:last-child) {
+            margin-right: 0;
 
-          &::after {
-            content: '';
-            width: 1px;
-            height: 16px;
-            background-color: #7b7b7b;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0;
+            &::after {
+              content: '';
+              width: 1px;
+              height: 16px;
+              background-color: #7b7b7b;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 0;
+            }
+          }
+
+          &:last-child {
+            .menu__link--footer {
+              padding-right: 0;
+            }
           }
         }
       }
+    }
+  }
+
+  &__copy {
+
+    @media (max-width: 600px) {
+      text-align: center;
     }
   }
 }

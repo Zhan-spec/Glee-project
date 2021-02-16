@@ -114,5 +114,10 @@ body {
     span {
       text-transform: uppercase;
     }
+
+    @media (max-width: 550px) {
+      margin-bottom: 5px;
+    }
+
   }
 }
