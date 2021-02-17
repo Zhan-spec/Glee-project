@@ -71,6 +71,11 @@ body {
   text-align: center;
   font-size: 36px;
   line-height: 1.4;
+
+  @media (max-width: 550px) {
+    font-size: 32px;
+  }
+
 }
 
 .mixitup-nav {
@@ -78,8 +83,18 @@ body {
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+
   &__item:not(:last-child) {
     margin-right: 18px;
+
+    @media (max-width: 550px) {
+     margin-right: 0;
+     margin-bottom: 10px;
+    }
+
   }
 
   &__btn {
@@ -99,6 +114,11 @@ body {
     &:active {
       color: $color-title-products-hover;
     }
+
+    @media (max-width: 550px) {
+      padding: 10px 0;
+     }
+
   }
 }
 
