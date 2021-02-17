@@ -1,53 +1,35 @@
-// .video {
-//   max-width: 1920px;
-//   width: 100%;
-//   height: 500px;
-//   padding-bottom: 70px;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: top center;
-//   margin-bottom: 50px;
-
-//   &__inner {
-//     width: 100%;    
-//     height: 500px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   &__svg {
-//     transition: transform 0.5s;
-
-//     &--play-btn {
-//       width: 127px;
-//       height: 127px;
-//     }
-
-//     &:hover {
-//       transform: scale(1.2);
-//     }
-//   }
-// }
-
-
 .video {
-  max-width: 1920px;
-  width: 100%;
-  // height: 500px;
-  //padding-bottom: 70px;
-
   margin-bottom: 50px;
 
+  @media (max-width: 600px) {
+    display: none;
+  }
 
+  &__inner {
+    max-width: 1920px;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+
+    @media (max-width: 1750px) {
+      height: 460px;
+    }
+
+    @media (max-width: 1200px) {
+      height: 320px;
+    }
+
+    @media (max-width: 960px) {
+      height: 250px;
+    }
+  }
 
   &__link {
-    display: block;
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,6 +37,18 @@
 
     &:hover svg {
       transform: scale(1.2);
+    }
+
+    @media (max-width: 1750px) {
+      height: 460px;
+    }
+
+    @media (max-width: 1200px) {
+      height: 320px;
+    }
+
+    @media (max-width: 960px) {
+      height: 250px;
     }
   }
 
