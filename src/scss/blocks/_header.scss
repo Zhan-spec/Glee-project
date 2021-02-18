@@ -1,98 +1,250 @@
 .header {
-  padding: 45px 0;
+  padding: 48px 0;
 
   &__wrap {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
 .menu {
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @media (max-width: 960px) {
+    order: 1;
   }
 
-  &__item:not(:first-child) {
-    margin-left: 33px;
+  @media (max-width: 550px) {
+    order: 0;
+  }
+
+  &__list {
+    &--header {
+      display: flex;
+      align-items: center;
+      padding-bottom: 5px;
+
+      @media (max-width: 960px) {
+        transform: translateY(-500%);
+        position: absolute;
+        width: 100%;
+        top: 140px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        z-index: 5;
+        transition: transform 0.5s;
+        background-color: #fff;
+
+        &.menu__list--active {
+          transform: translateY(0);
+          transition: transform 0.5s;
+        }
+      }
+    }
+
+    @media (max-width: 550px) {
+      top: 200px;
+    }
+  }
+
+  &__btn {
+    display: none;
+    outline: transparent;
+
+    @media (max-width: 960px) {
+      width: 30px;
+      height: 21px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        position: absolute;
+      }
+
+      &::before {
+        top: 0;
+        transition: transform 0.5s;
+      }
+
+      &::after {
+        bottom: 0;
+        transition: display 0.2s;
+      }
+
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+
+        transition: transform 0.5s;
+      }
+    }
+
+    &--active span {
+      transform: translateY(3px) rotate(-45deg);
+      outline: none;
+    }
+
+    &--active:after {
+      display: none;
+    }
+
+    &--active:before {
+      transform: translateY(-5px) rotate(45deg);
+      top: 18px;
+    }
+  }
+
+  &__item {
+    &--header {
+      span {
+        display: inline-block;
+        margin-left: 7px;
+      }
+
+      @media (max-width: 960px) {
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__item {
+    &--header:not(:last-child) {
+      margin-right: 30px;
+
+      @media (max-width: 1200px) {
+        margin-right: 15px;
+      }
+
+      @media (max-width: 960px) {
+        margin-right: 0;
+      }
+    }
   }
 
   &__link {
     @extend %rubik-500;
-    padding: 0 2px 1px;
+    padding: 0 2px 1px 2px;
     color: $color-menu;
     font-size: 15px;
     position: relative;
     border-bottom: 1px solid transparent;
-    transition: color 0.5s, border-bottom 0.5s;
+    transition: color 0.5s, border-bottom-color 0.5s;
 
-    &:hover {
-      @extend %rubik-700;
-      color: $color-text-hover;
-      border-bottom: 1px solid $color-text-hover;
-    }
-
+    &:focus,
+    &:hover,
+    &:active,
     &--active {
-      @extend %rubik-700;
       color: $color-text-hover;
-      border-bottom: 1px solid $color-text-hover;
+      border-bottom-color: $color-text-hover;
     }
-  }
 
-  &__link-plus:after {
-    content: '+';
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: -3px;
-    right: -10px;
+    @media (max-width: 960px) {
+      width: 100%;
+      padding: 15px 0;
+      display: block;
+    }
   }
 }
 
 .user-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  &__item {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
+  @media (max-width: 550px) {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: flex-end;
   }
 
-  &__item-choose {
-    border-radius: 25px;
-    background-color: $bgc-block-slide;
-    width: 178px;
-    height: 51px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 20px;
+  @media (max-width: 400px) {
+    justify-content: center;
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     position: relative;
-  }
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    border: none;
+    outline: transparent;
 
-  &__link-search {
-    background-color: rgb(163, 187, 200);
-    opacity: 0.2;
-  }
+    &:nth-child(2) {
+      border-right: 1px solid #fde7d3;
+    }
 
-  &__link-dots {
-    background-color: rgb(163, 187, 200);
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      border: 1px solid #ccc;
+    }
+
+    &--search,
+    &--dots {
+      background-color: rgb(163, 187, 200);
+      border-radius: 50%;
+    }
+
+    &--search {
+      background-image: url('../images/icons/search.svg');
+      margin-right: 22px;
+      background-position: center center;
+
+      @media (max-width: 960px) {
+        margin-right: 10px;
+      }
+    }
+
+    &--dots {
+      background-image: url('../images/icons/dots.svg');
+    }
+
+
+    &--wish,
+    &--cart {
+      background-color: #fcd7b6;
+      width: 90px;
+    }
+
+    &--wish {
+      background-image: url('../images/icons/heart.svg');
+      border-bottom-left-radius: 25px;
+      border-top-left-radius: 25px;
+      background-position: 40px 22px;
+    }
+
+    &--cart {
+      background-image: url('../images/icons/cart.svg');
+      background-position: 28px 22px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      margin-right: 17px;
+
+      @media (max-width: 960px) {
+        margin-right: 10px;
+      }
+    }
   }
 
   &__num {
@@ -109,13 +261,16 @@
     line-height: 2.7;
     position: absolute;
     top: 9px;
-    right: 7px;
-  }
+    right: 25px;
 
-  &__devider {
-    display: block;
-    width: 1px;
-    height: 32px;
-    background-color: #fde7d3;
+    &--wish {
+      top: 14px;
+      right: 21px;
+    }
+
+    &--cart {
+      top: 13px;
+      right: 36px;
+    }
   }
 }

@@ -1,3 +1,4 @@
+$color-default: #436372;
 $color-menu: #436372;
 $color-title: #243f4d;
 $color-text-default: #7b7b7b;
@@ -6,51 +7,89 @@ $bgc-block-slide: #fcd7b6;
 $bgc-btn: #a3bbc8;
 $bgc-btn-hover: #459ece;
 $color-text-hover: #000;
+$color-text-active: #ссс;
+$color-text-focus: #111;
 $color-footer-title: #1f2044;
 $color-title-information: #414141;
 $color-title-products: #8b8b8b;
 $color-products-price: #a3bbc8;
 $color-title-products-hover: #191919;
-$bgc-products: #fefefe;
 $color-user-nav-link: #a3bbc8;
 $color-user-nav-link-hover: #fff;
+$color-title-link-hover: #000;
+$color-title-link-active: #7b7b7b;
+$color-title-link-focus: #459ece;
 
+$color-text-form: #436372;
+$color-icon-product: #a3bbc8;
+$color-icon-fill: #243f4d;
+
+
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
 
 %rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik-Medium', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
 
 %rubik-700 {
-  font-family: 'Rubik-Bold', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
 }
 
 %dmsans-400 {
-  font-family: 'DMSans-Regular', sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: 'DMSans-Medium', sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 500;
 }
 
 %dmsans-700 {
-  font-family: 'DMSans-Bold', sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 700;
 }
 
-%transition-link {
-  transition: color 0.5s, font-weight 0.5s;
+%poppins-700 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
-%transition-link-props {
-  color: #000;
-  font-weight: 500;
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
 }
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+%link-hover {
+  color: $color-text-hover;
+  background-color: #ccc;
+  border-color: #000;
+}
+
+%link-active {  
+  color: $color-text-active;
+  background-color: #ccc;
+  border-color: $color-text-default;
+}
+
+%link-focus {
+  color: $color-text-focus;
+  background-color: #ccc;
+  border-color: $color-default;
+}
+
+
+

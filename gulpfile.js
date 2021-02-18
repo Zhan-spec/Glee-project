@@ -7,13 +7,27 @@ const uglify        = require('gulp-uglify');
 const imagemin      = require('gulp-imagemin');
 const del           = require('del');
 const browserSync   = require('browser-sync').create();
+const svgSprite     = require('gulp-svg-sprite');
+
+
+function svgSprites() {
+  return src('./src/images/icons/**.svg')
+  .pipe(svgSprite({
+    mode: {
+      stack: {
+        sprite: "../sprite.svg"
+      }
+    }
+  }))  
+  .pipe(dest('./src/images'))
+}
 
 function browsersync() {
   browserSync.init({
     server: {
       baseDir: 'src/'
     },
-    notefy: false /* убрать уведомления в правом верхнем углу браузера о выполнении действий browsersync*/
+    notify: false /* убрать уведомления в правом верхнем углу браузера о выполнении действий browsersync*/
   })
 }
 
@@ -35,6 +49,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'src/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -76,16 +91,22 @@ function watching() {
   watch(['src/scss/**/*.scss'], styles);
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
   /* следить за измеенниямии в 'src/js/--.js' но не следить за файлом '!src/js/main.min.js*/
+
+  watch(['src/images/icons/*.svg'], svgSprites);
   watch(['src/**/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;   /* для запуска function styles() */
 exports.scripts = scripts;
+exports.svgSprites = svgSprites;
 exports.browsersync = browsersync;
 exports.watching = watching;  /* для запуска function watching */
 exports.images = images;
-//exports.build = build;   /*  если запускаем build сразу для удаления dist, сжатия картинок и копирования файлов из src в dist то измользуем build с series*/
+//exports.build = build;   /*  если запускаем build сразу для удаления dist, сжатия картинок и копирования файлов из src в dist то используем build с series*/
+
+
+
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, svgSprites, browsersync, watching);
