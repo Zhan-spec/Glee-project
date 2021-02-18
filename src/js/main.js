@@ -22,14 +22,42 @@ $(function() {
     dots: true,
     fade: true
   });
-
-  
   
   $('.partners-slider').slick({
     arrows: false,      
     infinite: true,
     slidesToShow: 5,
-    slidesToScroll: 5
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   

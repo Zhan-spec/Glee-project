@@ -1,6 +1,11 @@
 .partners {
   background-color: #fef7f0;
   padding: 85px 0;
+
+  @media (max-width: 768px) {
+   padding-top: 45px;  
+   padding-bottom: 45px;
+  }
 }
 
 .partners-slider {
