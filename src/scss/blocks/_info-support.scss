@@ -5,7 +5,6 @@
     background-color: $bgc-block;
 
     @media (max-width: 960px) {
-      //display: block;
       flex-direction: column;
     }
   }
@@ -22,7 +21,6 @@
         border-right: none;
         border-bottom: 1px solid #e8e4df;
       }
-
     }
 
     @media (max-width: 1750px) {
@@ -45,9 +43,8 @@
     }
 
     @media (max-width: 550px) {
-      padding-left: 0;     
+      padding-left: 0;
     }
-
   }
 
   &__box {
@@ -86,7 +83,7 @@
       margin-left: 20px;
     }
 
-    @media (max-width: 550px) {     
+    @media (max-width: 550px) {
       margin-left: auto;
       margin-right: auto;
     }
@@ -126,8 +123,5 @@
       max-width: 100%;
       width: auto;
     }
-
   }
-
-
 }

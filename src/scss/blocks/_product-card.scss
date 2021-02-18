@@ -13,13 +13,13 @@
   padding-bottom: 20px;
 
   &__img-box {
-    height: 290px;  //  здесь ставить высоту!
-    overflow: hidden;    
+    height: 290px; //  здесь ставить высоту!
+    overflow: hidden;
     padding-top: 35px;
     margin-bottom: 5px;
   }
 
-  &__img {    
+  &__img {
     max-width: 270px;
     max-height: 290px;
     object-fit: contain;
@@ -32,7 +32,6 @@
     color: $color-title;
     line-height: 1.5;
     text-align: center;
-    //margin-bottom: -7px;
     @include line-clamp(1);
   }
 

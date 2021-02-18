@@ -2,6 +2,10 @@
   padding: 85px 0 0;
   margin-bottom: 110px;
 
+  @media (max-width: 600px) {
+    margin-bottom: 50px;
+  }
+
   @media (max-width: 400px) {
     margin-bottom: 0;
   }
@@ -30,7 +34,6 @@
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 30px;
     }
-
   }
 
   &__item {

@@ -17,7 +17,6 @@
 
   @media (max-width: 550px) {
     order: 0;
-    //margin-bottom: 50px;
   }
 
   &__list {
@@ -41,19 +40,14 @@
         &.menu__list--active {
           transform: translateY(0);
           transition: transform 0.5s;
-
         }
       }
     }
 
     @media (max-width: 550px) {
       top: 200px;
-
     }
-
   }
-
-
 
   &__btn {
     display: none;
@@ -111,11 +105,6 @@
       transform: translateY(-5px) rotate(45deg);
       top: 18px;
     }
-
-
-
-
-
   }
 
   &__item {
@@ -130,10 +119,7 @@
         padding: 0 15px;
         text-align: center;
       }
-
-
     }
-
   }
 
   &__item {
@@ -147,7 +133,6 @@
       @media (max-width: 960px) {
         margin-right: 0;
       }
-
     }
   }
 
@@ -173,15 +158,7 @@
       padding: 15px 0;
       display: block;
     }
-
-
-
-
-
   }
-
-
-
 }
 
 .user-nav {
@@ -248,7 +225,6 @@
     &--cart {
       background-color: #fcd7b6;
       width: 90px;
-
     }
 
     &--wish {

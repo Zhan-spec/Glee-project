@@ -3,7 +3,6 @@
   padding-top: 115px;
   margin: 0 auto 115px;
   background-color: #fff;
-  ;
 
   &__label {
     display: block;
@@ -60,10 +59,11 @@
   }
 
   &__box,
-  &__text { 
+  &__text {
     font-size: 14px;
     line-height: 3;
   }
+
   &__box {
     display: flex;
     justify-content: space-between;
@@ -74,8 +74,10 @@
     text-align: center;
     margin-bottom: 20px;
   }
+
   &__error {
     display: inline-block;
+
     &:hover {
       color: #000;
     }
