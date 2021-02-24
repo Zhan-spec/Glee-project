@@ -6,7 +6,7 @@
   border: 1px solid transparent;
   transition: transform 0.5s border-color 0.5s;
 
-  @media (max-width: 1200px) {
+  @include r($w1199) {
     max-width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -14,7 +14,7 @@
   }
 
   &__link-item {
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       height: 245px;
     }
   }
@@ -23,18 +23,8 @@
     width: 100%;
     object-fit: cover;
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       height: 245px;
-    }
-  }
-
-  &__link-title {
-    position: absolute;
-    top: 40px;
-    left: 35px;
-
-    @media (max-width: 400px) {
-      top: 20px;
     }
   }
 
@@ -44,8 +34,18 @@
     color: $color-title-products-hover;
     font-size: 20px;
     line-height: 1.2;
+    position: absolute;
+    top: 40px;
+    left: 35px;
 
-    @media (max-width: 400px) {
+    @include r($w1199) {
+      top: 15px;
+    }
+    @include r($w991) {
+      max-width: 100%;
+    }
+
+    @include r($w575) {
       max-width: 100%;
       font-size: 18px;
     }
@@ -53,18 +53,25 @@
 
   &__type {
     position: absolute;
-    top: 100px;
-    left: 35px;
+     top: 100px;
+     left: 35px;
     @extend %dmsans-700;
     color: #a3bbc8;
 
-    @media (max-width: 400px) {
-      top: 55px;
+    @include r($w1199) {
+      top: 65px;
+    }
+
+    @include r($w991) {
+      top: 50px;
+    }
+
+    @include r($w767) {
+      top: 60px;
     }
   }
 
   &:hover {
-    transform: scale(1.1);
-    border-color: #ccc;
+    transform: scale(1.05);    
   }
 }

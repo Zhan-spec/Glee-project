@@ -2,21 +2,17 @@
   padding: 70px 0;
   margin-bottom: 65px;
 
-  @media (max-width: 960px) {
+  @include r($w991) {
     padding-bottom: 100px;
     margin-bottom: 150px;
   }
 
-  @media (max-width: 768px) {
+  @include r($w767) {
     padding-bottom: 50px;
     margin-bottom: 100px;
   }
 
-  @media (max-width: 600px) {
-    padding-bottom: 50px;
-  }
-
-  @media (max-width: 550px) {
+  @include r($w575) {
     padding-bottom: 50px;
     margin-bottom: 0;
   }
@@ -37,8 +33,9 @@
     flex-wrap: wrap;
     margin-right: -30px;
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       margin-right: 0;
+      justify-content: center;
     }
   }
 
@@ -50,11 +47,6 @@
 
     &:hover .product-card__nav {
       z-index: 1;
-    }
-
-    @media (max-width: 1200px) {
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 

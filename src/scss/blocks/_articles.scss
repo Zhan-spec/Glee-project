@@ -7,7 +7,7 @@
     align-items: center;
     margin-bottom: 45px;
 
-    @media (max-width: 550px) {
+    @include r($w575) {
       flex-direction: column;
     }
   }
@@ -45,19 +45,21 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
     }
 
-    @media (max-width: 960px) {
+
+    @include r($w991) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 600px) {
+    @include r($w575) {
       grid-template-columns: repeat(1, 1fr);
     }
+
   }
 
   &__item {
@@ -68,7 +70,8 @@
     border-radius: 5px;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 
-    @media (max-width: 960px) {
+
+    @include r($w991) {
       max-width: 100%;
     }
 

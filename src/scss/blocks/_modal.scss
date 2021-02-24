@@ -21,9 +21,14 @@
     transition: border-bottom-color 0.3s;
     outline: transparent;
 
-    &:focus,
+    &:focus {
+      border-bottom-color: $color-text-focus;
+    }
+    &:hover {
+      border-bottom-color: $color-text-hover;
+    }
     &:active {
-      border-bottom-color: #000;
+      border-bottom-color: $color-text-active;
     }
   }
 

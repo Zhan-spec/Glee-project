@@ -1,5 +1,19 @@
 $(function() {
 
+  // липкий хедер
+  // var HeaderTop = $('.header__inner').offset().top;
+        
+  // $(window).scroll(function(){
+  //         if( $(window).scrollTop() > HeaderTop ) {                  
+  //                 $('.header__inner').addClass('header__inner--fixed');
+  //                 $('.header__inner').removeClass('header__inner--static');
+  //         } else {
+  //                 $('.header__inner').addClass('header__inner--static');
+  //                 $('.header__inner').removeClass('header__inner--fixed');
+  //         }
+  // });
+
+
   $('.footer__title--nav').on('click', function() {
     $(this).siblings().slideToggle();
   });

@@ -8,24 +8,24 @@
     align-items: center;
     flex-wrap: wrap;
   }
-}
 
-.menu {
-  @media (max-width: 960px) {
-    order: 1;
+  &__menu {
+    @include r($w991) {
+      order: 1;
+    }
+
+    @include r($w575) {
+      order: 0;
+    }
   }
 
-  @media (max-width: 550px) {
-    order: 0;
-  }
-
-  &__list {
-    &--header {
+  .menu {
+    &__list {
       display: flex;
       align-items: center;
       padding-bottom: 5px;
 
-      @media (max-width: 960px) {
+      @include r($w991) {
         transform: translateY(-500%);
         position: absolute;
         width: 100%;
@@ -42,121 +42,125 @@
           transition: transform 0.5s;
         }
       }
-    }
 
-    @media (max-width: 550px) {
-      top: 200px;
-    }
-  }
-
-  &__btn {
-    display: none;
-    outline: transparent;
-
-    @media (max-width: 960px) {
-      width: 30px;
-      height: 21px;
-      border: none;
-      background-color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      position: relative;
-
-      &::before,
-      &::after {
-        content: '';
-        width: 100%;
-        height: 3px;
-        background-color: #000;
-        position: absolute;
-      }
-
-      &::before {
-        top: 0;
-        transition: transform 0.5s;
-      }
-
-      &::after {
-        bottom: 0;
-        transition: display 0.2s;
-      }
-
-      span {
-        width: 100%;
-        height: 3px;
-        background-color: #000;
-
-        transition: transform 0.5s;
+      @include r($w575) {
+        top: 200px;
       }
     }
 
-    &--active span {
-      transform: translateY(3px) rotate(-45deg);
-      outline: none;
-    }
-
-    &--active:after {
+    &__btn {
       display: none;
+      outline: transparent;
+
+      @include r($w991) {
+        width: 30px;
+        height: 21px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: #000;
+          position: absolute;
+        }
+
+        &::before {
+          top: 0;
+          transition: transform 0.5s;
+        }
+
+        &::after {
+          bottom: 0;
+          transition: display 0.2s;
+        }
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: #000;
+
+          transition: transform 0.5s;
+        }
+      }
+
+      &--active span {
+        transform: translateY(3px) rotate(-45deg);
+        outline: none;
+      }
+
+      &--active:after {
+        display: none;
+      }
+
+      &--active:before {
+        transform: translateY(-5px) rotate(45deg);
+        top: 18px;
+      }
     }
 
-    &--active:before {
-      transform: translateY(-5px) rotate(45deg);
-      top: 18px;
-    }
-  }
-
-  &__item {
-    &--header {
+    &__item {
       span {
         display: inline-block;
         margin-left: 7px;
       }
 
-      @media (max-width: 960px) {
+      @include r($w991) {
         width: 100%;
         padding: 0 15px;
         text-align: center;
       }
     }
-  }
 
-  &__item {
-    &--header:not(:last-child) {
+    &__item:not(:last-child) {
       margin-right: 30px;
 
-      @media (max-width: 1200px) {
+      @include r($w1199) {
         margin-right: 15px;
       }
 
-      @media (max-width: 960px) {
+      @include r($w991) {
         margin-right: 0;
       }
     }
-  }
 
-  &__link {
-    @extend %rubik-500;
-    padding: 0 2px 1px 2px;
-    color: $color-menu;
-    font-size: 15px;
-    position: relative;
-    border-bottom: 1px solid transparent;
-    transition: color 0.5s, border-bottom-color 0.5s;
+    &__link {
+      @extend %rubik-500;
+      padding: 0 2px 1px 2px;
+      color: $color-menu;
+      font-size: 15px;
+      position: relative;
+      border-bottom: 1px solid transparent;
+      transition: color 0.5s, border-bottom-color 0.5s;
 
-    &:focus,
-    &:hover,
-    &:active,
-    &--active {
-      color: $color-text-hover;
-      border-bottom-color: $color-text-hover;
-    }
+      &:focus {
+        color: $color-text-hover;
+        border-bottom-color: $color-text-focus
+      }
 
-    @media (max-width: 960px) {
-      width: 100%;
-      padding: 15px 0;
-      display: block;
+      &:hover {
+        color: $color-text-hover;
+        border-bottom-color: $color-text-hover;
+      }
+
+      &:active,
+      &--active {
+        color: $color-text-hover;
+        border-bottom-color: $color-text-active;
+      }
+
+      @include r($w991) {
+        width: 100%;
+        padding: 15px 0;
+        display: block;
+      }
     }
   }
 }
@@ -165,13 +169,9 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: 550px) {
+  @include r($w575) {
     width: 100%;
     margin-top: 30px;
-    justify-content: flex-end;
-  }
-
-  @media (max-width: 400px) {
     justify-content: center;
   }
 
@@ -187,16 +187,22 @@
     background-position: center center;
     border: none;
     outline: transparent;
+    cursor: pointer;
 
     &:nth-child(2) {
       border-right: 1px solid #fde7d3;
     }
 
-    &:hover {
-      opacity: 0.5;
+    &:focus {
+      border: 1px solid #333;
     }
 
-    &:focus {
+    &:hover {
+      opacity: 0.5;
+      border: 1px solid #000;
+    }
+
+    &:active {
       border: 1px solid #ccc;
     }
 
@@ -211,7 +217,7 @@
       margin-right: 22px;
       background-position: center center;
 
-      @media (max-width: 960px) {
+      @include r($w991) {
         margin-right: 10px;
       }
     }
@@ -219,7 +225,6 @@
     &--dots {
       background-image: url('../images/icons/dots.svg');
     }
-
 
     &--wish,
     &--cart {
@@ -241,7 +246,7 @@
       border-bottom-right-radius: 25px;
       margin-right: 17px;
 
-      @media (max-width: 960px) {
+      @include r($w991) {
         margin-right: 10px;
       }
     }

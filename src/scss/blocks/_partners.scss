@@ -2,7 +2,7 @@
   background-color: #fef7f0;
   padding: 85px 0;
 
-  @media (max-width: 768px) {
+  @include r($w767) {
     padding-top: 45px;
     padding-bottom: 45px;
   }

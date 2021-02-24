@@ -3,7 +3,7 @@
     background-color: $bgc-block-slide;
     padding-bottom: 50px;
 
-    @media (max-width: 550px) {
+    @include r($w575) {
       padding-bottom: 25px;
     }
   }
@@ -14,19 +14,26 @@
     display: flex !important;
     justify-content: space-between;
 
-    @media (max-width: 1750px) {
+    @include r($w1750) {
       padding: 50px 85px 0px 150px;
       justify-content: space-around;
     }
 
-    @media (max-width: 1400px) {
+    @include r($w1400) {
       padding: 50px 25px 0px 25px;
 
     }
 
-    @media (max-width: 960px) {
+    @include r($w991) {
       padding-top: 25px;
     }
+
+    @include r($w767) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
 
   &__content {
@@ -35,26 +42,27 @@
     margin-bottom: 50px;
     padding-top: 114px;
 
-    @media (max-width: 1700px) {
+    @include r($w1750) {
       margin-right: 150px;
     }
 
-    @media (max-width: 1400px) {
+    @include r($w1400) {
       margin-right: 50px;
+      padding-top: 35px;
     }
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       margin-right: 25px;
       padding-top: 60px;
     }
 
-    @media (max-width: 960px) {
+    @include r($w991) {
       margin-right: 0;
       margin-bottom: 50px;
       padding-top: 25px;
     }
 
-    @media (max-width: 550px) {
+    @include r($w767) {
       max-width: 100%;
     }
   }
@@ -69,16 +77,21 @@
     @include line-clamp(2);
     text-align: left;
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       font-size: 58px;
     }
 
-    @media (max-width: 550px) {
+    @include r($w991) {
       font-size: 48px;
     }
 
-    @media (max-width: 400px) {
-      font-size: 32px;
+    @include r($w767) {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include r($w575) {
+      font-size: 36px;
     }
   }
 
@@ -90,11 +103,22 @@
     color: $color-menu;
     @include line-clamp(3);
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       max-width: 350px;
     }
 
-    @media (max-width: 550px) {
+    @include r($w991) {
+      max-width: 300px;
+    }
+
+    @include r($w767) {
+      max-width: 100%;
+      text-align-last: left;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    @include r($w575) {
       max-width: 100%;
       margin-bottom: 35px;
     }
@@ -115,6 +139,12 @@
       transform: translateY(-9px);
       right: 17px;
     }
+
+    @include r($w767) {
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__wrap-img {
@@ -126,23 +156,36 @@
     position: relative;
     right: 14px;
 
-    @media (max-width: 1700px) {
+    @include r($w1750) {
       max-width: 550px;
       height: 550px;
     }
 
-    @media (max-width: 1400px) {
+    @include r($w1400) {
       max-width: 400px;
       height: 400px;
     }
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       max-width: 380px;
       height: 380px;
     }
 
-    @media (max-width: 960px) {
-      display: none;
+    @include r($w991) {
+      max-width: 350px;
+      height: 350px;
+      background-image: none;
+      right: 0;
+    }
+
+    @include r($w767) {
+      max-width: 300px;
+      height: 200px;
+    }
+
+    @include r($w575) {
+      max-width: 250px;
+      height: 150px;
     }
   }
 
@@ -155,18 +198,34 @@
     right: 116px;
     transform: translateY(-55%);
 
-    @media (max-width: 1700px) {
+    @include r($w1750) {
       max-width: 550px;
       height: 550px;
     }
 
-    @media (max-width: 1400px) {
+    @include r($w1400) {
       max-width: 400px;
       height: 400px;
     }
 
-    @media (max-width: 1200px) {
+    @include r($w1199) {
       max-width: 380px;
+    }
+
+    @include r($w991) {
+      right: 0;
+      max-width: 350px;
+      height: 350px;
+    }
+
+    @include r($w767) {
+      max-width: 300px;
+      height: 200px;
+    }
+
+    @include r($w575) {
+      max-width: 250px;
+      height: 150px;
     }
   }
 
@@ -189,6 +248,7 @@
         &:focus {
           background-color: #999;
           transform: scale(1.1);
+          border: 1px solid #333;
         }
 
         &:hover {

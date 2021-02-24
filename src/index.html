@@ -18,53 +18,56 @@
 
   <header class="header">
     <div class="container container--big">
-      <div class="header__wrap">
-        <a class="logo header__logo" href="#body">
-          <img class="logo__img" src="images/logo.png" width="146" height="39" alt="Logo">
-        </a>
-        <nav class="menu">
-          <ul class="menu__list menu__list--header">
-            <li class="menu__item menu__item--header">
-              <a class="menu__link menu__link--active" href="#">
-                Home<span>+</span>
-              </a>
-            </li>
-            <li class="menu__item menu__item--header">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item menu__item--header">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item menu__item--header">
-              <a class="menu__link" href="#">Pages<span>+</span></a>
-            </li>
-            <li class="menu__item menu__item--header">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item menu__item--header">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-          <button class="menu__btn">
-            <span></span>
-          </button>
-        </nav>
+      <div class="header__inner">
+        <div class="header__wrap">
 
-        <div class="user-nav">
-          <button class="user-nav__link user-nav__link--search" type="button">
-            <span class="sr-only">Open Search field</span>
-          </button>
-          <a class="user-nav__link user-nav__link--wish" href="#">
-            <span class="user-nav__num user-nav__num--wish">0</span>
-            <span class="sr-only">Open Likes' page</span>
+          <a class="logo header__logo" href="#body">
+            <img class="logo__img" src="images/logo.png" width="146" height="39" alt="Logo">
           </a>
-          <a class="user-nav__link user-nav__link--cart" href="#">
-            <span class="user-nav__num user-nav__num--cart">0</span>
-            <span class="sr-only">Open cart page</span>
-          </a>
-          <button class="user-nav__link user-nav__link--dots" type="button">
-            <span class="sr-only">Sign in form</span>
-          </button>
+          <nav class="menu header__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active" href="#">
+                  Home<span>+</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Services</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Pages<span>+</span></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">News</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Contact</a>
+              </li>
+            </ul>
+            <button class="menu__btn">
+              <span></span>
+            </button>
+          </nav>
+
+          <div class="user-nav">
+            <button class="user-nav__link user-nav__link--search" type="button">
+              <span class="sr-only">Open Search field</span>
+            </button>
+            <a class="user-nav__link user-nav__link--wish" href="#">
+              <span class="user-nav__num user-nav__num--wish">0</span>
+              <span class="sr-only">Open Likes' page</span>
+            </a>
+            <a class="user-nav__link user-nav__link--cart" href="#">
+              <span class="user-nav__num user-nav__num--cart">0</span>
+              <span class="sr-only">Open cart page</span>
+            </a>
+            <button class="user-nav__link user-nav__link--dots" type="button">
+              <span class="sr-only">Sign in form</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -83,11 +86,9 @@
               <h3 class="top-slider__title">
                 Smart and trendy
               </h3>
-              <div class="top-slider__text">
-                <p>
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-              </div>
+              <p class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
               <a class="btn top-slider__link" href="#">
                 Shop Now
               </a>
@@ -103,11 +104,9 @@
               <h3 class="title top-slider__title">
                 Smart and trendy
               </h3>
-              <div class="top-slider__text">
-                <p>
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-              </div>
+              <p class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
               <a class="btn top-slider__link" href="#">
                 Shop Now
               </a>
@@ -121,11 +120,9 @@
               <h3 class="title top-slider__title">
                 Smart and trendy 3
               </h3>
-              <div class="top-slider__text">
-                <p>
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-              </div>
+              <p class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
               <a class="btn top-slider__link" href="#">
                 Shop Now
               </a>
@@ -143,30 +140,24 @@
       <div class="container container--big">
         <ul class="info-support__inner">
           <li class="info-support__item info-support__item--support">
-            <div class="info-support__box info-support__box--support">
-              <p class="info-support__title">Support 24/7.</p>
-              <p class="info-support__text info-support__text--support">
-                Contact us 24 hours a day, 7 days a week.
-              </p>
-            </div>
+            <p class="info-support__title">Support 24/7.</p>
+            <p class="info-support__text info-support__text--support">
+              Contact us 24 hours a day, 7 days a week.
+            </p>
           </li>
           <li class="info-support__item info-support__item--delivery">
-            <div class="info-support__box info-support__box--delivery">
-              <p class="info-support__title">Delivery.</p>
-              <p class="info-support__text">
-                Free shipping on all US order.
-              </p>
-            </div>
+            <p class="info-support__title">Delivery.</p>
+            <p class="info-support__text">
+              Free shipping on all US order.
+            </p>
           </li>
           <li class="info-support__item info-support__item--card">
-            <div class="info-support__box info-support__box--card">
-              <p class="info-support__title">
-                100% Payment secure.
-              </p>
-              <p class="info-support__text">
-                We ensure secure payment with PEV.
-              </p>
-            </div>
+            <p class="info-support__title">
+              100% Payment secure.
+            </p>
+            <p class="info-support__text">
+              We ensure secure payment with PEV.
+            </p>
           </li>
         </ul>
       </div>
@@ -195,7 +186,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair1.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -211,7 +202,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -234,7 +225,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair2.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -250,7 +241,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -271,7 +262,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair3.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -287,7 +278,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -308,7 +299,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair4.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -324,7 +315,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -345,7 +336,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair5.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -361,7 +352,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -382,7 +373,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair6.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -398,7 +389,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -419,7 +410,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair7.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -435,7 +426,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -456,7 +447,7 @@
                   <img class="product-card__img" src="images/content/products/photo-chair8.png" alt="photo chair">
                   <ul class="product-card__nav">
                     <li class="product-card__item">
-                      <a class="product-card__link product-card__link--search" href="#">
+                      <a class="product-card__link" href="#">
                         <svg class="product-card__svg product-card__svg--search">
                           <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -472,7 +463,7 @@
                       </button>
                     </li>
                     <li class="product-card__item">
-                      <button class="product-card__link product-card__link--heart" type="button">
+                      <button class="product-card__link" type="button">
                         <svg class="product-card__svg product-card__svg--heart">
                           <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
@@ -511,7 +502,7 @@
                   LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                 </p>
               </div>
-              <a class="btn promo-card__link" href="#">
+              <a class="promo-card__link" href="#">
                 View more
               </a>
             </div>
@@ -530,7 +521,7 @@
                   50W 8000lm Compact Size for HID StreetLightReplacementLEDCorn Light
                 </p>
               </div>
-              <a class="btn promo-card__link" href="#">
+              <a class="promo-card__link" href="#">
                 View more
               </a>
             </div>
@@ -561,14 +552,12 @@
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img class="design-card__img" src="images/content/design/photo1.jpg" alt="Design item's photo">
-                </a>
-                <a class="design-card__link-title" href="#">
                   <h3 class="design-card__title">
                     Beat Flat Pendant Black
                   </h3>
-                </a>
-                <a class="design-card__type" href="#">
-                  Classic
+                  <p class="design-card__type">
+                    Classic
+                  </p>
                 </a>
               </article>
             </li>
@@ -576,14 +565,12 @@
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img class="design-card__img" src="images/content/design/photo2.jpg" alt="Design item's photo">
-                </a>
-                <a class="design-card__link-title" href="#">
                   <h3 class="design-card__title">
                     Lampe Sur Pieds Bamboo
                   </h3>
-                </a>
-                <a class="design-card__type" href="#">
-                  Classic
+                  <p class="design-card__type">
+                    Classic
+                  </p>
                 </a>
               </article>
             </li>
@@ -591,14 +578,12 @@
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img class="design-card__img" src="images/content/design/photo3.jpg" alt="Design item's photo">
-                </a>
-                <a class="design-card__link-title" href="#">
                   <h3 class="design-card__title">
                     Rattan Rocking Chair
                   </h3>
-                </a>
-                <a class="design-card__type" href="#">
-                  Classic
+                  <p class="design-card__type">
+                    Classic
+                  </p>
                 </a>
               </article>
             </li>
@@ -606,14 +591,12 @@
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img class="design-card__img" src="images/content/design/photo4.jpg" alt="Design item's photo">
-                </a>
-                <a class="design-card__link-title" href="#">
                   <h3 class="design-card__title">
                     Rattan Rocking Chair
                   </h3>
-                </a>
-                <a class="design-card__type" href="#">
-                  Classic
+                  <p class="design-card__type">
+                    Classic
+                  </p>
                 </a>
               </article>
             </li>
@@ -621,14 +604,12 @@
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img class="design-card__img" src="images/content/design/photo5.jpg" alt="Design item's photo">
-                </a>
-                <a class="design-card__link-title" href="#">
                   <h3 class="design-card__title">
                     Rattan Rocking Chair
                   </h3>
-                </a>
-                <a class="design-card__type" href="#">
-                  Classic
+                  <p class="design-card__type">
+                    Classic
+                  </p>
                 </a>
               </article>
             </li>
@@ -636,14 +617,12 @@
               <article class="design-card">
                 <a class="design-card__link-item" href="#">
                   <img class="design-card__img" src="images/content/design/photo6.jpg" alt="Design item's photo">
-                </a>
-                <a class="design-card__link-title" href="#">
                   <h3 class="design-card__title">
                     Lampe Sur Pieds Bamboo
                   </h3>
-                </a>
-                <a class="design-card__type" href="#">
-                  Classic
+                  <p class="design-card__type">
+                    Classic
+                  </p>
                 </a>
               </article>
             </li>
@@ -658,7 +637,7 @@
         <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
           style="background-image: url('images/video-bg.jpg');">
           <span class="sr-only">Video play button</span>
-          <svg class="video__svg video__svg--play-btn">
+          <svg class="video__svg">
             <use xlink:href="images/sprite.svg#play-btn"></use>
           </svg>
         </a>
@@ -679,23 +658,23 @@
           <ul class="articles__items">
             <li class="articles__item">
               <article class="article-preview">
-                <a class="article-preview__link--img" href="#">
+                <a class="article-preview__link-img" href="#">
                   <img src="images/articles/photo1.jpg" alt="article img">
                 </a>
                 <div class="article-preview__box">
                   <a href="#" class="article-preview__news">News</a>
-                  <a class="article-preview__link--title" href="#">
+                  <a class="article-preview__link-title" href="#">
                     <h3 class="article-preview__title">
                       Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                     </h3>
                   </a>
                   <div class="article-preview__info">
                     <time class="article-preview__time">
-                      <a class="article-preview__link--date" href="#">
+                      <a class="article-preview__link-date" href="#">
                         28 January, 2020
                       </a>
                     </time>
-                    <a href="#" class="article-preview__link--author">
+                    <a href="#" class="article-preview__link-author">
                       By Admin
                     </a>
                   </div>
@@ -704,23 +683,23 @@
             </li>
             <li class="articles__item">
               <article class="article-preview">
-                <a class="article-preview__link--img" href="#">
+                <a class="article-preview__link-img" href="#">
                   <img src="images/articles/photo2.jpg" alt="article img">
                 </a>
                 <div class="article-preview__box">
                   <a href="#" class="article-preview__news">News</a>
-                  <a class="article-preview__link--title" href="#">
+                  <a class="article-preview__link-title" href="#">
                     <h3 class="article-preview__title">
                       Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     </h3>
                   </a>
                   <div class="article-preview__info">
                     <time class="article-preview__time">
-                      <a class="article-preview__link--date" href="#">
+                      <a class="article-preview__link-date" href="#">
                         28 January, 2020
                       </a>
                     </time>
-                    <a href="#" class="article-preview__link--author">
+                    <a href="#" class="article-preview__link-author">
                       By Admin
                     </a>
                   </div>
@@ -729,23 +708,23 @@
             </li>
             <li class="articles__item">
               <article class="article-preview">
-                <a class="article-preview__link--img" href="#">
+                <a class="article-preview__link-img" href="#">
                   <img src="images/articles/photo3.jpg" alt="article img">
                 </a>
                 <div class="article-preview__box">
                   <a href="#" class="article-preview__news">News</a>
-                  <a class="article-preview__link--title" href="#">
+                  <a class="article-preview__link-title" href="#">
                     <h3 class="article-preview__title">
                       Rncididunt ut labore et dolore magna aliqua. Ut enim
                     </h3>
                   </a>
                   <div class="article-preview__info">
                     <time class="article-preview__time">
-                      <a class="article-preview__link--date" href="#">
+                      <a class="article-preview__link-date" href="#">
                         28 January, 2020
                       </a>
                     </time>
-                    <a href="#" class="article-preview__link--author">
+                    <a href="#" class="article-preview__link-author">
                       By Admin
                     </a>
                   </div>
@@ -813,7 +792,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__col footer__col--contact">
+        <div class="footer__col footer__col-contact">
           <a class="logo footer__logo" href="#body">
             <img class="logo__img" src="images/logo.png" width="146px" height="39px" alt="Logo">
           </a>
@@ -836,8 +815,8 @@
             </p>
           </address>
         </div>
-        <div class="footer__col footer__col--nav">
-          <p class="footer__title footer__title--nav">Services</p>
+        <div class="footer__col footer__col-nav">
+          <p class="footer__title footer__title-nav">Services</p>
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">About us</a>
@@ -856,8 +835,8 @@
             </li>
           </ul>
         </div>
-        <div class="footer__col footer__col--nav">
-          <p class="footer__title footer__title--nav">Account</p>
+        <div class="footer__col footer__col-nav">
+          <p class="footer__title footer__title-nav">Account</p>
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">Your Account</a>
@@ -873,7 +852,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__col footer__col--form">
+        <div class="footer__col footer__col-form">
           <h2 class="footer__title">Newsletter</h2>
           <p class="footer__text">
             Subscribe by our newsletter and get update protidin.
@@ -891,18 +870,18 @@
           ©2020 CopyRight Example. All rights reserved.
         </p>
         <nav class="menu footer__menu">
-          <ul class="menu__list menu__list--footer">
-            <li class="menu__item menu__item--footer">
-              <a class="menu__link menu__link--footer" href="#">Home</a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Home</a>
             </li>
-            <li class="menu__item menu__item--footer">
-              <a class="menu__link menu__link--footer" href="#">About</a>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
             </li>
-            <li class="menu__item menu__item--footer">
-              <a class="menu__link menu__link--footer" href="#">Blog</a>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Blog</a>
             </li>
-            <li class="menu__item menu__item--footer">
-              <a class="menu__link menu__link--footer" href="#">Contact</a>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact</a>
             </li>
           </ul>
         </nav>
