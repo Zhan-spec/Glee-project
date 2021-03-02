@@ -1,5 +1,5 @@
 .product-card {
-  max-width: 270px;
+  //max-width: 270px;
   width: 100%;
   //max-height: 380px;  //  здесь не ставить высоту!
   background-color: #fff;
@@ -14,6 +14,83 @@
   position: relative;
   padding-bottom: 20px;
 
+  &__star {
+    display: none;
+  }
+
+  &__content-box {
+    display: none;
+  }
+
+  &.product-card--list {
+    min-width: 100%;    
+    flex-direction: row;
+    padding-bottom: 0;
+    
+    .product-card {
+
+      &__img-box {
+        height: 500px;
+        min-width: 370px;
+        background-color: #fefefe;
+        border: 2px solid #f2f2f2;
+        margin-bottom: 0;
+      }
+
+      &__img {        
+        height: 500px;
+      }
+
+      &__link {
+        border-radius: 0;
+        border: 1px solid $bgc-btn;
+      }
+
+      &__star {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      &__content-box {
+        display: block;
+      }
+
+      &__wrapper-box {
+        padding: 45px 7px 70px 40px;
+        
+      }
+
+      &__title {
+        text-align: left;
+        @extend %rubik-400;
+        font-size: 40px;
+        color: $color-text-focus;
+        margin-bottom: 15px;
+        @include line-clamp(1);
+      }
+
+      &__price {
+        text-align: left;
+        @extend %rubik-400;
+        font-size: 30px;
+        color: $color-text-focus;
+        line-height: 1.5;
+      }
+
+      &__nav {       
+        bottom: 150px;
+      }
+
+    }
+
+    .product-card__nav {
+      .product-card__item--search {
+        display: none;
+      }
+    }
+
+  }
+
   &__img-box {
     height: 290px; //  здесь ставить высоту!
     overflow: hidden;
@@ -23,6 +100,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
 
   &__img {
@@ -54,13 +132,14 @@
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 50px;
     width: 168px;
     height: 46px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    bottom: 135px;
+    
     z-index: -1;
     transition: z-index 1.5s;
 
@@ -90,13 +169,15 @@
     &:focus {
       outline-color: #000;
     }
+
     &:hover {
       background-color: $color-user-nav-link;
 
       .product-card__svg {
-        fill: $color-user-nav-link-hover;        
+        fill: $color-user-nav-link-hover;
       }
     }
+
     &:active {
       outline-color: #ccc;
     }
@@ -120,5 +201,18 @@
       width: 18px;
       height: 16px;
     }
+  }
+
+  &__text {
+    @extend %rubik-400;
+    color: $color-title;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    @include line-clamp(3);
+  }
+  &__btn {
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 17px 50px;
   }
 }

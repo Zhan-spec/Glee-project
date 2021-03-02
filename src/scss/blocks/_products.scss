@@ -48,6 +48,11 @@
     &:hover .product-card__nav {
       z-index: 1;
     }
+
+    &.products__item--list {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   .mixitup-control-active {
