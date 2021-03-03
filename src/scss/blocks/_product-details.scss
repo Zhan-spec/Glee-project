@@ -1,0 +1,266 @@
+.product-details {
+  padding: 125px 0 115px;
+}
+
+.product-one {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slide {
+    max-width: 550px;
+    width: 100%;
+    //margin-right: 70px;
+  }
+
+  &__content {
+    max-width: 550px;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  &__title {
+    @extend %rubik-400;
+    font-size: 40px;
+    color: $color-text-focus;
+    margin-bottom: 20px;
+  }
+
+  &__star {
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    font-size: 30px;
+    color: $color-text-focus;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    color: $color-title;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 16px 50px;
+  }
+
+  &__form-box {
+    margin-bottom: 55px;
+  }
+
+  &__num {
+    margin-right: 15px;
+  }
+}
+
+.product-slide {
+  display: flex;
+
+  .slick-vertical .slick-slide {
+    height: 160px;
+    margin-bottom: 25px;
+  }
+
+  &__thumb {
+    width: 140px;
+    margin-right: 25px;
+  }
+
+  &__thumb-item {
+    width: 140px;
+    height: 160px;
+    margin-bottom: 25px;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+
+    img {
+      width: 140px;
+      max-height: 160px;
+      object-fit: cover;
+    }
+  }
+
+  &__big {
+    max-width: 390px;
+    width: 100%;
+  }
+
+  &__big-item {
+    width: 390px;
+    width: 100%;
+    height: 535px;
+    border: 1px solid #f2f2f2;
+    padding: 60px 50px;
+
+    img {
+      //width: 390px;
+      width: 250px;
+      margin: 0 auto;
+      //height: 535px;
+      object-fit: cover;
+    }
+  }
+}
+
+.product-info {
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    display: flex;
+    color: $color-title;
+  }
+
+  &__title {
+    margin-right: 5px;
+  }
+}
+
+.jq-number__field {
+  width: 150px;
+  border: 1px solid $bgc-btn;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.jq-number__field input {
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 51px;
+  border: none;
+  outline: none;
+  @extend %rubik-400;
+  font-size: 15px;
+  line-height: 3;
+  color: $color-text-focus;
+  text-align: center;
+}
+
+.jq-number {
+  position: relative;
+  padding: 0;
+}
+
+.jq-number__spin {
+  position: absolute;
+  cursor: pointer;
+  width: 50px;
+  height: 51px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.jq-number__spin.minus {
+  left: 0;
+  border-right: 1px solid $bgc-btn;
+}
+
+.jq-number__spin.plus {
+  right: 0;
+  border-left: 1px solid $bgc-btn;
+}
+
+.jq-number__spin:after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 1px;
+  background-color: $color-text-focus;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  color: $color-text-focus;
+}
+
+
+.jq-number__spin.plus:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 9px;
+  background-color: $color-text-focus;
+  top: calc(50% - 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-tabs {
+  padding-top: 100px;
+
+  &__top {
+    margin-bottom: 35px;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $color-title;
+  }
+}
+
+.tabs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 245px;
+    height: 54px;
+    background-color: #edf1f4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    width: 100%;
+    padding: 15px 23px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+
+    &:focus {
+      outline-color: #000;
+    }
+
+    &:hover {
+      background-color: $bgc-btn-hover;
+      color: $color-text-default;
+    }
+
+    &:active {
+      border-color: #000;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: $bgc-btn;
+    }
+  }
+}
+
+.tabs-content {
+  &__item {
+    display: none;
+
+    &.tabs-content__item--active {
+      display: block;
+    }
+  }  
+
+  &__comments {
+    margin-bottom: 25px;
+  }
+}

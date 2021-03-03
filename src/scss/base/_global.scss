@@ -58,9 +58,6 @@ body {
   outline-color: transparent;
   cursor: pointer;
   transition: color 0.5s, background-color 0.5s;
-}
-
-.btn {
 
   &:focus {
     outline-color: #000;
