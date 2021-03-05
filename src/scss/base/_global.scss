@@ -192,13 +192,37 @@ body {
     &--hidden {
       display: none;
     }
-    
-
   }
-
-
-
   &__item:not(:last-child) {
     margin-right: 15px;
   }
 }
+
+
+.filter-search {
+  &__form {
+    display: flex;
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+    outline: transparent;
+  }
+
+  &__input {
+    border: 1px solid #edf1f4;
+    // border-radius: 5px;
+    background-color: #fff;
+    width: 268px;
+    height: 41px;
+  }
+  &__btn {
+    width: 48px;
+    height: 41px;
+    border-radius: 5px;
+    border: 1px solid #edf1f4;
+    background-color: #edf1f4;
+    margin-left: -10px;
+  }
+
+}
+
+

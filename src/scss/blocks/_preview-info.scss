@@ -1,0 +1,50 @@
+.preview-info {
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  padding-left: 3px;
+  padding-top: 13px;
+
+  @include r($w991) {
+    justify-content: space-between;
+  }
+
+  &__time {
+    margin-right: 20px;
+  }
+  
+  &__link-date,
+  &__link-author {
+    font-size: 12px;
+    line-height: 2.1;
+    color: #222933;    
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 1px;
+      left: 0;
+    }
+  
+    &:hover {      
+      color: inherit;
+  
+      &::before {
+        filter: invert(64%) sepia(0%) saturate(2%) hue-rotate(136deg) brightness(97%) contrast(85%);
+      }
+    }
+  }
+  
+  &__link-date::before {
+    background-image: url('../images/icons/icon-calendar.svg');
+  }
+  
+  &__link-author::before {
+    background-image: url('../images/icons/icon-user.svg');
+    top: 7px;
+  }
+}
