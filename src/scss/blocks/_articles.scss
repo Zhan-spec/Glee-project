@@ -51,7 +51,6 @@
       grid-gap: 20px;
     }
 
-
     @include r($w991) {
       grid-template-columns: repeat(2, 1fr);
     }

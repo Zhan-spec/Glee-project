@@ -2,7 +2,7 @@
   padding: 112px 0 120px;
 
   &__inner {
-    display: flex;    
+    display: flex;
   }
 
   &__filters {
@@ -24,6 +24,7 @@
       margin-bottom: 40px;
     }
   }
+
   &__filter {
     border: 1px solid $bgc-block;
     padding: 20px 25px 20px 30px;
@@ -47,7 +48,8 @@
     line-height: 0;
     cursor: pointer;
 
-    &.product-content__filter-btn--active, &:hover {
+    &.product-content__filter-btn--active,
+    &:hover {
       path {
         fill: $color-title;
       }
@@ -59,26 +61,26 @@
   }
 
   &__fiter-sort {
-    .jq-selectbox__dropdown {  
+    .jq-selectbox__dropdown {
       width: 200px;
     }
   }
-  &__fiter-show {
 
-  }
+  &__fiter-show {}
 }
 
-.jq-selectbox__select {  
+.jq-selectbox__select {
   height: 32px;
   padding: 0 30px 0 0;
-  border: none;  
+  border: none;
   background: transparent;
-  box-shadow: none;  
+  box-shadow: none;
   text-shadow: none;
   margin-right: 35px;
   @extend %dmsans-500;
   font-size: 16px;
   color: $color-title-products;
+
   &:hover {
     background-color: transparent;
   }

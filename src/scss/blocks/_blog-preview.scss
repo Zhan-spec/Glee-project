@@ -25,39 +25,44 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
     &:hover {
       background-color: #517588;
     }
+
     &.preview-info {
       border-top: none;
       padding-left: 0;
       padding-top: 0;
 
       .preview-info {
-        
+
         &__link-date,
         &__link-author {
           padding-left: 20px;
 
           &:hover {
             color: #fff;
-            
+
             &::before {
               filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(105%) contrast(103%);
-            }            
+            }
           }
         }
       }
     }
   }
+
   &__link-title {
     margin-bottom: 20px;
   }
+
   &__title {
     @extend %rubik-400;
     font-size: 36px;
     color: $color-text-focus;
   }
+
   &__text {
     color: $color-title;
     margin-bottom: 37px;
@@ -85,7 +90,7 @@
       right: 20px;
       filter: invert(89%) sepia(8%) saturate(743%) hue-rotate(162deg) brightness(84%) contrast(84%);
 
-      
+
     }
 
     &:focus {
@@ -103,7 +108,7 @@
       }
 
 
-      
+
     }
 
     &:active {
@@ -112,6 +117,3 @@
 
   }
 }
-
-
-

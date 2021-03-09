@@ -24,9 +24,11 @@
     &:focus {
       border-bottom-color: $color-text-focus;
     }
+
     &:hover {
       border-bottom-color: $color-text-hover;
     }
+
     &:active {
       border-bottom-color: $color-text-active;
     }

@@ -26,11 +26,11 @@
     }
 
     @include r($w991) {
-      grid-template-columns: repeat(2, 1fr);      
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @include r($w575) {
-      grid-template-columns: repeat(1, 1fr);     
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 

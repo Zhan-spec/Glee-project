@@ -271,171 +271,27 @@
                   </div>
                 </li>
               </ul>
-              <form class="comments-form" action="#">
-                <h3 class="comments-form__title">
+              <form class="comments__form feedback" action="#">
+                <h3 class="feedback__title">
                   Leave A Comment
                 </h3>
-                <div class="comments-form__box-input">
-                  <input class="comments-form__text-input" type="text" placeholder="Name">
-                  <input class="comments-form__text-input" type="email" placeholder="youremail@gmail.com">
+                <div class="feedback__box-input">
+                  <div class="feedback__wrap feedback__wrap--name">
+                    <input class="feedback__input" type="text" placeholder="Name">
+                  </div>
+                  <div class="feedback__wrap feedback__wrap--email">
+                    <input class="feedback__input" type="email" placeholder="youremail@gmail.com">
+                  </div>
                 </div>
-                <textarea class="comments-form__textarea" placeholder="Comment"></textarea>
-                <button class="btn comments-form__btn" type="submit">
+                <div class="feedback__wrap feedback__wrap--textarea">
+                  <textarea class="feedback__textarea" placeholder="Comment"></textarea>
+                </div>                
+                <button class="btn feedback__btn" type="submit">
                   Post comment
                 </button>
               </form>
             </div>
 
-            <!-- <ul class="blog-page__items">
-            <li class="blog-page__item">
-              <article class="blog-preview">
-                <div class="blog-preview__box">
-                  <a class="blog-preview__link-img" href="#">
-                    <img class="blog-preview__img" src="images/blog/photo-1.jpg" alt="Blog photo">
-                  </a>                  
-                  <div class="blog-preview__info preview-info">
-                    <time class="preview-info__time">
-                      <a class="preview-info__link-date" href="#">
-                        28 January, 2020
-                      </a>
-                    </time>
-                    <a href="#" class="preview-info__link-author">
-                      By Admin
-                    </a>
-                  </div>
-                </div>
-                <a class="blog-preview__link-title" href="#">
-                  <h3 class="blog-preview__title">
-                    Fonsectetur adipisicing eiusmod
-                  </h3>
-                </a>
-                <p class="blog-preview__text">
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet,
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a class="blog-preview__link" href="#">
-                  View More
-                </a>
-              </article>
-            </li>
-            <li class="blog-page__item">
-              <article class="blog-preview">
-                <div class="blog-preview__box">
-                  <a class="blog-preview__link-img" href="#">
-                    <img class="blog-preview__img" src="images/blog/photo-2.jpg" alt="Blog photo">
-                  </a>                  
-                  <div class="blog-preview__info preview-info">
-                    <time class="preview-info__time">
-                      <a class="preview-info__link-date" href="#">
-                        28 January, 2020
-                      </a>
-                    </time>
-                    <a href="#" class="preview-info__link-author">
-                      By Admin
-                    </a>
-                  </div>
-                </div>
-                <a class="blog-preview__link-title" href="#">
-                  <h3 class="blog-preview__title">
-                    Fonsectetur adipisicing eiusmod
-                  </h3>
-                </a>
-                <p class="blog-preview__text">
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet,
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a class="blog-preview__link" href="#">
-                  View More
-                </a>
-              </article>
-            </li>
-            <li class="blog-page__item">
-              <article class="blog-preview">
-                <div class="blog-preview__box">
-                  <a class="blog-preview__link-img" href="#">
-                    <img class="blog-preview__img" src="images/blog/photo-3.jpg" alt="Blog photo">
-                  </a>
-                  <div class="blog-preview__info preview-info">
-                    <time class="preview-info__time">
-                      <a class="preview-info__link-date" href="#">
-                        28 January, 2020
-                      </a>
-                    </time>
-                    <a href="#" class="preview-info__link-author">
-                      By Admin
-                    </a>
-                  </div>
-                </div>
-                <a class="blog-preview__link-title" href="#">
-                  <h3 class="blog-preview__title">
-                    Fonsectetur adipisicing eiusmod
-                  </h3>
-                </a>
-                <p class="blog-preview__text">
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet,
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a class="blog-preview__link" href="#">
-                  View More
-                </a>
-              </article>
-            </li>
-            <li class="blog-page__item">
-              <article class="blog-preview">
-                <div class="blog-preview__box">
-                  <a class="blog-preview__link-img" href="#">
-                    <img class="blog-preview__img" src="images/blog/photo-4.jpg" alt="Blog photo">
-                  </a>                  
-                  <div class="blog-preview__info preview-info">
-                    <time class="preview-info__time">
-                      <a class="preview-info__link-date" href="#">
-                        28 January, 2020
-                      </a>
-                    </time>
-                    <a href="#" class="preview-info__link-author">
-                      By Admin
-                    </a>
-                  </div>
-                </div>
-                <a class="blog-preview__link-title" href="#">
-                  <h3 class="blog-preview__title">
-                    Fonsectetur adipisicing eiusmod
-                  </h3>
-                </a>
-                <p class="blog-preview__text">
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet,
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a class="blog-preview__link" href="#">
-                  View More
-                </a>
-              </article>
-            </li>
-          </ul> -->
-
-            <!-- <div class="pagination">            
-            <ul class="pagination__list">
-              <li class="pagination__item pagination__item--hidden">
-                <a class="pagination__link pagination__link--prev " href="#">Prev</a>
-              </li>
-              <li class="pagination__item pagination__item--active">
-                <a class="pagination__link" href="#">1</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">2</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">3</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--next" href="#">Next</a>
-              </li>
-            </ul>            
-          </div> -->
           </div>
 
           <aside class="blog-page__aside filter">

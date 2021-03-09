@@ -56,14 +56,17 @@
     &:focus {
       outline: 1px solid #000;
     }
+
     &:hover {
       color: #333;
     }
+
     &:active {
       color: #999;
     }
 
   }
+
   &__social {
     display: flex;
   }
@@ -82,6 +85,7 @@
     &:focus {
       outline: 1px solid #000;
     }
+
     &:hover {
       filter: invert(0%) sepia(100%) saturate(7407%) hue-rotate(344deg) brightness(82%) contrast(95%);
     }

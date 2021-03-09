@@ -224,7 +224,7 @@
 
         border-bottom: 1px solid transparent;
         transition: color 0.5s, border-bottom-color 0.5s;
-        
+
         &:focus {
           color: $color-text-hover;
           border-bottom-color: $color-text-focus

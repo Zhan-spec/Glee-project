@@ -41,6 +41,7 @@
     @include r($w1199) {
       top: 15px;
     }
+
     @include r($w991) {
       max-width: 100%;
     }
@@ -53,8 +54,8 @@
 
   &__type {
     position: absolute;
-     top: 100px;
-     left: 35px;
+    top: 100px;
+    left: 35px;
     @extend %dmsans-700;
     color: #a3bbc8;
 
@@ -72,6 +73,6 @@
   }
 
   &:hover {
-    transform: scale(1.05);    
+    transform: scale(1.05);
   }
 }

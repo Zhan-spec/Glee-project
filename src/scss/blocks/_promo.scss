@@ -1,7 +1,7 @@
 .promo {
   margin-bottom: 50px;
 
-  @include r($w575) {    
+  @include r($w575) {
     margin-bottom: 0;
   }
 
@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include r($w1199) {    
+    @include r($w1199) {
       display: block;
     }
   }
@@ -26,24 +26,24 @@
   justify-content: center;
   align-items: center;
 
-  @include r($w1199) {    
+  @include r($w1199) {
     max-width: 100%;
   }
 
-  @include r($w575) {    
+  @include r($w575) {
     padding: 10px;
     min-height: 275px;
   }
-  
+
   &:not(:last-child) {
-    margin-right: 30px;    
+    margin-right: 30px;
 
     @include r($w1199) {
       margin-right: 0;
       margin-bottom: 175px;
     }
 
-    @include r($w575) {    
+    @include r($w575) {
       margin-bottom: 35px;
     }
   }

@@ -30,7 +30,7 @@
     outline-color: #000;
   }
 
-  &:focus-within {    
+  &:focus-within {
     border-color: #a3bbc8;
   }
 
@@ -40,11 +40,12 @@
 
   &:active {
     border-color: #000;
-  }  
+  }
 }
 
 .slick-prev {
   right: 50px;
+
   &:before {
     content: '';
     width: 22px;
@@ -57,6 +58,7 @@
     background-image: url('../../images/icons/icon-arrow-left.svg');
   }
 }
+
 .slick-next {
   &:before {
     content: '';
@@ -77,6 +79,4 @@
   //border-color: red;
 }
 
-.slick-arrow {
-
-}
+.slick-arrow {}
