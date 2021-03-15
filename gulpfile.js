@@ -5,6 +5,7 @@ const concat        = require('gulp-concat');
 const autoprefixer  = require('gulp-autoprefixer');
 const uglify        = require('gulp-uglify');
 const imagemin      = require('gulp-imagemin');
+const fileinclude   = require('gulp-file-include');
 const rename        = require('gulp-rename');
 const del           = require('del');
 const browserSync   = require('browser-sync').create();
@@ -31,6 +32,18 @@ const svgSprite     = require('gulp-svg-sprite');
 //     .pipe(browserSync.stream());
 // }
 
+function fileInclude() {
+  //return src('./src/html/*.html', '!./src/html/parts/*.html')
+  return src('./src/module/*.html', '!./src/module/_*/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest('./src'))
+    .pipe(browserSync.stream());
+}
+
+
 function svgSprites() {
   return src('./src/images/icons/**.svg')
   .pipe(svgSprite({
@@ -53,14 +66,15 @@ function browsersync() {
 }
 
 function styles() {
-  return src('src/scss/style.scss')  // до настройки файла index.scss   // для настройки модульности с gulp-file-include
-  //return src('src/scss/*.scss')  // после настройки файла index.scss
+  //return src('src/scss/style.scss')  // до настройки файла index.scss   // для настройки модульности с gulp-file-include
+  return src('src/scss/*.scss')  // после настройки файла index.scss
     .pipe(scss({outputStyle: 'compressed'}))  /* expanded | compressed */
-    .pipe(concat('style.min.css'))  /* указываем название файла после конвератции */  // до настройки файла index.scss
+    //.pipe(concat('style.min.css'))  /* указываем название файла после конвератции */  // до настройки файла index.scss
+    
     //.pipe(concat()) // после настройки файла index.scss
-    // .pipe(rename({   // для настройки модульности с gulp-file-include
-    //   suffix : '.min'
-    // }))
+    .pipe(rename({   // для настройки модульности с gulp-file-include
+       suffix : '.min'
+    }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 2 versions'],
       grid: true
@@ -105,9 +119,10 @@ function images() {
 
 function build() {
   return src([
-    'src/**/*.html',  // строка до добавления gulp-file-include
-    //'src/html/*.html',  // строка после добавления gulp-file-include  // для настройки модульности с gulp-file-include
-    'src/css/style.min.css',
+    //'src/**/*.html',  // строка до добавления gulp-file-include
+    'src/module/*.html',  // строка после добавления gulp-file-include  // для настройки модульности с gulp-file-include
+    //'src/css/style.min.css', // строка до добавления gulp-file-include
+    'src/css/*.min.css', // строка после добавления gulp-file-include
     'src/js/main.min.js'
   ], {base: 'src'})
   .pipe(dest('dist'))
@@ -118,8 +133,11 @@ function cleanDist() {
 }
 
 function watching() {
+  //watch(['src/module/**/*.scss'], styles);
+  watch(['src/module/**/*.*'], fileInclude);
+  //watch(['src/scss/**/*.scss'], styles);
+  watch(['src/scss/**/*.scss', '!src/scss/blocks/*.scss'], styles);
   watch(['src/module/**/*.scss'], styles);
-  watch(['src/scss/**/*.scss'], styles);
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
   /* следить за измеенниямии в 'src/js/--.js' но не следить за файлом '!src/js/main.min.js*/
 
@@ -129,8 +147,9 @@ function watching() {
   //watch(['src/module/**/*.html']).on('change', includeHTML);
   
 
-  watch(['src/**/*.html']).on('change', browserSync.reload);  // строка до добавления gulp-file-include
-  //watch(['src/**/*.html']).on('change', browserSync.reload);  // строка после добавления gulp-file-include
+  //watch(['src/**/*.html']).on('change', browserSync.reload);  // строка до добавления gulp-file-include
+  //watch(['src/html/*.html']).on('change', browserSync.reload);  // строка после добавления gulp-file-include
+  watch(['src/module/*.html']).on('change', browserSync.reload);  // строка после добавления gulp-file-include
 
   
 }
@@ -141,6 +160,7 @@ exports.svgSprites = svgSprites;
 exports.browsersync = browsersync;
 exports.watching = watching;  /* для запуска function watching */
 exports.images = images;
+exports.fileInclude = fileInclude;
 //exports.includeHTML = includeHTML;
 //exports.build = build;   /*  если запускаем build сразу для удаления dist, сжатия картинок и копирования файлов из src в dist то используем build с series*/
 
@@ -149,7 +169,7 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, svgSprites, browsersync, watching);
+//exports.default = parallel(styles, scripts, svgSprites, browsersync, watching);
 
 // для настройки модульности с gulp-file-include
-//exports.default = parallel(styles, includeHTML, scripts, svgSprites, browsersync, watching);
+exports.default = parallel(styles, fileInclude, scripts, svgSprites, browsersync, watching);

@@ -1,0 +1,58 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 29.789472838844432, lng: -95.35601211417783 },
+        zoom: 10,
+        styles: [
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "visibility": "off"
+              },
+              {
+                "color": "#d62222"
+              },
+              {
+                "saturation": "-55"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              {
+                "visibility": "on"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "hue": "#eb00ff"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "visibility": "on"
+              },
+              {
+                "hue": "#3d00ff"
+              }
+            ]
+          }
+        ]
+      });
+    }
+  </script>

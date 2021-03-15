@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee | Home page</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/about.min.css">
+</head>
+<body id="body">
+
+@@include('_header/_header.html')
+
+<main>
+
+  @@include('_top/_top.html', {
+    "namePage": "About us",
+    "namePath": "About us"
+  }) 
+  @@include('_about/_about.html')
+  @@include('_info-about/_info-about.html')
+  @@include('_team/_team.html')
+  @@include('_articles/_articles.html')
+  @@include('_partners/_partners.html')  
+  
+</main>
+
+@@include('_footer/_footer.html')
+@@include('_footer/_footer-scripts.html')

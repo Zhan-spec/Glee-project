@@ -1,0 +1,203 @@
+.blog-details {
+  @include r($w767) {
+    padding: 75px 0;
+  }
+
+  &__content {
+    max-width: 830px;
+    width: 100%;
+
+    @include r($w1199) {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    padding: 40px 0;
+    margin-bottom: 20px;
+
+    h3 {
+      @extend %rubik-400;
+      font-size: 36px;
+      color: $color-text-focus;
+      margin-bottom: 20px;
+
+      @include r($w575) {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+
+    h4 {
+      @extend %rubik-500;
+      font-size: 18px;
+      line-height: 1.7;
+      color: $color-title;
+      margin: 40px 0 20px;
+    }
+
+    strong {
+      @extend %rubik-500;
+      font-size: 16px;
+      line-height: 1.9;
+      color: $color-title;
+      margin-bottom: 25px;
+
+      @include r($w575) {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      line-height: 1.9;
+      color: $color-title;
+      margin-bottom: 25px;
+
+      @include r($w575) {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+      }
+    }
+
+    blockquote {
+      background-color: #edf1f4;
+      border-left: 6px solid $bgc-btn;
+      padding: 22px 85px 20px 35px;
+      color: $color-title;
+      line-height: 1.9;
+      margin: 40px 0;
+
+      @include r($w575) {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 20px;
+      }
+
+      span {
+        display: block;
+        margin-top: 20px;
+        padding-left: 40px;
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 20px;
+          height: 3px;
+          //background-color: $bgc-btn;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+
+          background-image: url('../images/icons/blockquote-mark.png');
+        }
+      }
+    }
+  }
+
+  &__text-box {
+    margin-bottom: 40px;
+    height: 210px;
+
+    @include r($w767) {
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 325px;
+      height: 210px;
+      object-fit: cover;
+
+      @include r($w767) {
+        margin: 0 auto;
+      }
+    }
+
+    .blog-details__left-img {
+      float: left;
+      margin-right: 30px;
+
+      @include r($w767) {
+        float: none;
+        margin-right: auto;
+      }
+    }
+
+    .blog-details__right-img {
+      float: right;
+      margin-left: 30px;
+    }
+
+    div {
+
+      h4 {
+        @extend %rubik-500;
+        font-size: 18px;
+        line-height: 1.7;
+        color: $color-title;
+        display: inline-block;
+        margin: 20px 0;
+
+        @include r($w767) {
+          margin-bottom: 5px;
+          line-height: 1.4;
+        }
+      }
+
+      p {
+        @include r($w767) {
+          line-height: 1.4;
+        }
+      }
+    }
+
+    
+  }
+
+  &__author {
+    margin-bottom: 60px;
+  }
+
+  &__comments {
+    margin-bottom: 80px;
+
+    @include r($w991) {
+      margin-bottom: 0;
+    }
+  }
+
+  .blog-preview {
+    &__img {
+      @include r($w767) {
+        height: 400px;
+      }
+
+      @include r($w575) {
+        height: 275px;
+      }
+    }
+  }
+
+  .feedback {
+    &__box-input {
+      @include r($w767) {
+       display: block;
+       width: 100%;
+       margin-bottom: 0;
+      }
+    }
+
+    &__wrap {
+      width: 100%; 
+      margin-bottom: 25px;
+      
+    }
+
+
+  }
+}
+

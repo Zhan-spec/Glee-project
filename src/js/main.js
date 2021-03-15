@@ -34,7 +34,18 @@ $(function() {
     slidesToScroll: 1,
     vertical: true,    
     draggable: false,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          vertical: false
+        }
+      }
+    ]
     //fade: true
   });
   $('.product-slide__big').slick({
@@ -166,8 +177,30 @@ $(function() {
     slidesToShow: 4,
     slidesToScroll: 4,
     prevArrow: '<button type="button" class="slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"></button>'
-
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
   
 

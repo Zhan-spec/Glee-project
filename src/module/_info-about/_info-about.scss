@@ -1,0 +1,87 @@
+.info-about {
+  background-color: #fcd7b6;
+  padding: 80px 0;
+
+  @include r($w1199) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($w1199) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
+    }
+
+    @include r($w575) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    text-align: center;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $color-title;
+
+    @include r($w1199) {
+      margin: 0 auto;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include r($w1199) {
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 65px;
+    margin: 0 auto 15px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &--monitor {
+      background-image: url('../images/icons/icon-about-monitor.svg');
+    }
+
+    &--car {
+      background-image: url('../images/icons/icon-about-car.svg');
+    }
+
+    &--clock {
+      background-image: url('../images/icons/icon-about-clock.svg');
+    }
+
+    &--award {
+      background-image: url('../images/icons/icon-about-award.svg');
+    }
+
+    &::after {
+      content: '';
+      border-radius: 50%;
+      background-color: rgba(163, 187, 200, 0.7);
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+    }
+  }
+
+  &__info {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
