@@ -2,12 +2,13 @@
   padding: 120px 0 70px;
 
   @include r($w991) {
-    padding-top: 75px;
+    //padding-top: 75px;
+    padding: 75px 0;
   }
 
-  @include r($w575) {
-   padding-bottom: 35px;
-  }
+  // @include r($w575) {
+  //  padding-bottom: 75px;
+  // }
 
   &__inner {
     display: flex;
@@ -44,13 +45,44 @@
     margin-bottom: 40px;
   }
 
+  &__btn {
+    @extend %poppins-700;
+    font-size: 15px;
+    line-height: 1.3;
+    color: #fff;
+    padding: 16px 55px 16px 16px;
+    border-radius: 5px;
+    width: 170px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: url('../images/icons/icon-blog-arrow-right.svg');
+      filter: invert(99%) sepia(28%) saturate(359%) hue-rotate(215deg) brightness(118%) contrast(100%);      
+      width: 16px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-9px);
+      right: 25px;
+      transition: filter 0.5s;
+    }
+
+    &:hover {
+      &::after {
+        filter: invert(40%) sepia(99%) saturate(13%) hue-rotate(19deg) brightness(101%) contrast(96%);
+      }
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px 30px;
+    grid-gap: 100px 30px;
 
     @include r($w767) {
-      grid-gap: 25px;
+      grid-gap: 100px 20px;
     }
 
     @include r($w575) {
@@ -62,7 +94,7 @@
 .team-card {
   max-width: 370px;
   width: 100%;
-  height: 380px;
+  height: 320px;
   box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
   position: relative;
 
@@ -84,14 +116,25 @@
   &__info-box {
     max-width: 320px;
     width: 100%;
-    padding: 30px 25px;
+    padding: 20px 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #fff;
-
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -60px;
+
+    @include r($w767) {
+     display: block;
+     padding: 10px 15px;
+    }
+  }
+
+  &__info-member {
+    @include r($w767) {
+      margin-bottom: 15px;
+     }
   }
 
   &__name {
@@ -99,10 +142,45 @@
     font-size: 22px;
     line-height: 1.2;
     color: $color-default;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   &__position {
     color: #565872;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    @include r($w767) {
+      justify-content: space-around;
+     }
+  }
+  &__social-link {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: rgb(246, 246, 246);    
+    cursor: pointer;    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    
+  }
+
+  .social-link {
+    &__svg-inst {
+      width: 17px;
+      height: 17px;
+    }
+
+    &__svg-google {
+      width: 23px;
+      height: 15px;
+    }
   }
 }
