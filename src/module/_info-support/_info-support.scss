@@ -1,0 +1,212 @@
+.info-support {
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    background-color: $bgc-block;
+
+    @include r($w991) {
+      flex-direction: column;
+    }
+  }
+
+  // &__item {
+  //   width: 33.33%;
+  //   padding: 37px 55px;
+  //   position: relative;
+
+  //   &:not(:last-child) {
+  //     border-right: 1px solid #e8e4df;
+
+
+  //     @include r($w991) {
+  //       border-right: none;
+  //       border-bottom: 1px solid #e8e4df;
+  //     }
+  //   }
+
+  //   @include r($w1199) {
+  //     padding: 20px 10px;
+  //   }
+
+  //   @include r($w991) {
+  //     max-width: 100%;
+  //     width: auto;
+  //     display: block;
+  //     padding-left: 50px;
+  //   }
+
+  //   @include r($w575) {
+  //     padding-left: 10px;
+  //   }
+  // }
+
+  // &__box {
+  //   max-width: 315px;
+  //   width: 100%;
+  //   position: relative;
+  //   background-repeat: no-repeat;
+  //   background-position: left 10px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+
+  //   &--support {
+  //     background-image: url('../images/icons/icon-support.svg');
+  //   }
+
+  //   &--delivery {
+  //     background-image: url('../images/icons/icon-truck.svg');
+  //     background-position: -8px 22px;
+  //   }
+
+  //   &--card {
+  //     background-image: url('../images/icons/icon-card.svg');
+  //   }
+
+  //   @include r($w1199) {
+  //     background-position: 10px 10px;
+  //   }
+
+  //   @include r($w991) {
+  //     max-width: 100%;
+  //     margin-left: 0;
+  //     padding-bottom: 10px;
+  //   }
+
+  //   @include r($w575) {      
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //   }
+  // }
+
+  &__item {
+    width: 33.33%;
+    padding: 37px 55px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 12% 48px;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+
+      @include r($w991) {
+        border-right: none;
+        border-bottom: 1px solid #e8e4df;
+      }
+    }
+
+    &--support {
+      background-image: url('../images/icons/icon-support.svg');
+    }
+
+    &--delivery {
+      background-image: url('../images/icons/icon-truck.svg');      
+    }
+
+    &--card {
+      background-image: url('../images/icons/icon-card.svg');
+    }
+
+    @include r($w1199) {
+      background-position: 6% 30px;
+    }
+
+    @include r($w991) {
+      background-position: 25% 30px;      
+    }
+
+    @include r($w575) {   
+      background-position: 5% 30px;
+    }
+
+    @include r($w1199) {
+      padding: 20px 10px;
+    }
+
+    @include r($w991) {
+      max-width: 100%;
+      width: auto;
+      display: block;
+      padding-left: 25%;
+    }
+
+    @include r($w575) {
+      padding-left: 5%;
+    }
+  }
+
+  // &__box {
+  //   max-width: 315px;
+  //   width: 100%;
+  //   position: relative;
+  //   background-repeat: no-repeat;
+  //   background-position: left 10px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+
+  //   &--support {
+  //     background-image: url('../images/icons/icon-support.svg');
+  //   }
+
+  //   &--delivery {
+  //     background-image: url('../images/icons/icon-truck.svg');
+  //     background-position: -8px 22px;
+  //   }
+
+  //   &--card {
+  //     background-image: url('../images/icons/icon-card.svg');
+  //   }
+
+  //   @include r($w1199) {
+  //     background-position: 10px 10px;
+  //   }
+
+  //   @include r($w991) {
+  //     max-width: 100%;
+  //     margin-left: 0;
+  //     padding-bottom: 10px;
+  //   }
+
+  //   @include r($w575) {      
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //   }
+  // }
+
+
+
+  &__title {
+    margin-left: 80px;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: $color-title-information;
+
+    @include r($w1199) {
+      margin-left: 75px;
+    }
+  }
+
+  &__text {
+    max-width: 215px;
+    width: 100%;
+    margin-left: 80px;
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #585858;
+
+    &--support {
+      max-width: 205px;
+    }
+
+    @include r($w1199) {
+      margin-left: 75px;
+      line-height: 1.3;
+    }
+
+    @include r($w991) {
+      max-width: 100%;
+      width: auto;
+    }
+  }
+}

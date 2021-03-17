@@ -1,0 +1,46 @@
+.design {
+  padding: 85px 0 0;
+  margin-bottom: 110px;
+
+  @include r($w575) {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    font-size: 36px;
+  }
+
+  &__mixitup-nav {
+    margin-bottom: 75px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 40px 30px;
+
+    @include r($w1199) {
+      grid-gap: 20px 15px;
+    }
+
+    @include r($w991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($w575) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    max-height: 245px;
+
+    @include r($w991) {
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.blog-preview {
+
+  &__box {
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  &__link-img {
+    display: block;
+  }
+
+  &__img {
+    max-width: 830px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 70px;
+    background-color: $bgc-btn;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    &:hover {
+      background-color: #517588;
+    }
+
+    &.preview-info {
+      border-top: none;
+      padding-left: 0;
+      padding-top: 0;
+
+      .preview-info {
+
+        &__link-date,
+        &__link-author {
+          padding-left: 20px;
+
+          &:hover {
+            color: #fff;
+
+            &::before {
+              filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(105%) contrast(103%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__link-title {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @extend %rubik-400;
+    font-size: 36px;
+    color: $color-text-focus;
+  }
+
+  &__text {
+    color: $color-title;
+    margin-bottom: 37px;
+  }
+
+  &__link {
+    display: block;
+    width: 180px;
+    //width: 100%;
+    padding: 20px;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1;
+    color: $bgc-btn;
+    border: 1px solid $bgc-btn;
+    position: relative;
+
+    &:after {
+      content: url('../images/icons/icon-arr-right.svg');
+      width: 22px;
+      height: 9px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-8px);
+      right: 20px;
+      filter: invert(89%) sepia(8%) saturate(743%) hue-rotate(162deg) brightness(84%) contrast(84%);
+
+
+    }
+
+    &:focus {
+      outline: 1px solid $color-text-focus;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $bgc-btn-hover;
+
+
+      .blog-preview__link:after {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(98deg) brightness(101%) contrast(104%);
+        z-index: 999;
+      }
+
+
+
+    }
+
+    &:active {
+      background-color: $color-text-active;
+    }
+
+  }
+}

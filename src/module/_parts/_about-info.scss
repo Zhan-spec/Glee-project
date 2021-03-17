@@ -1,0 +1,88 @@
+.about-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include r($w575) {
+    display: block;
+  }
+
+  &__item {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e6eaf0;
+
+      @include r($w575) {
+        border-right: none;
+      }
+    }
+
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 1.1;
+    color: $color-title;
+    text-align: left;
+
+    span {
+      &:last-child {
+        font-size: 16px;
+        color: #4c4c4c;
+        display: block;
+      }
+    }
+
+    @include r($w575) {
+      width: 100%;
+      margin: 0 auto 25px;
+    }
+  }
+
+  &__item-box {
+    padding-left: 60px;
+    position: relative;
+    max-width: 150px;
+    width: 100%;
+    overflow: hidden;
+    
+    &--projects,
+    &--revenue,
+    &--awards {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+      }
+    }
+
+    &--projects {
+      &::before {
+        width: 36px;
+        height: 38px;
+        left: 0;
+        background-image: url('../images/icons/icon-sheet.svg');
+      }
+    }
+
+    &--revenue {
+      &::before {
+        width: 43px;
+        height: 39px;
+        left: 0;
+        background-image: url('../images/icons/icon-microphone.svg');
+      }
+    }
+
+    &--awards {
+      &::before {
+        width: 42px;
+        height: 40px;
+        left: 0;
+        background-image: url('../images/icons/icon-medal.svg');
+      }
+    }
+  }
+}

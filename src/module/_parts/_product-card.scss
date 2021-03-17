@@ -1,0 +1,264 @@
+.product-card {
+  //max-width: 270px;
+  width: 100%;
+  //max-height: 380px;  //  здесь не ставить высоту!
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  position: relative;
+  padding-bottom: 20px;
+
+  &__star {
+    display: none;
+  }
+
+  &__content-box {
+    display: none;
+  }
+
+  &.product-card--list {
+    min-width: 100%;
+    flex-direction: row;
+    padding-bottom: 0;
+    
+    @include r($w575) {
+      display: block;
+    }
+    
+    .product-card {      
+
+      &__img-box {
+        height: 500px;
+        min-width: 370px;
+        background-color: #fefefe;
+        border: 2px solid #f2f2f2;
+        margin-bottom: 0;
+
+        @include r($w767) {
+          height: 350px;
+          min-width: 290px;
+        }
+        @include r($w575) {
+         margin-bottom: 20px;
+        }
+      }
+
+      &__img {
+        height: 500px;
+
+        @include r($w767) {
+          height: 275px;
+        }
+      }
+
+      &__link {
+        border-radius: 0;
+        border: 1px solid $bgc-btn;
+      }
+
+      &__title {
+        text-align: left;
+        @extend %rubik-400;
+        font-size: 40px;
+        color: $color-text-focus;
+        margin-bottom: 15px;
+        @include line-clamp(1);
+
+        @include r($w767) {
+         font-size: 28px;
+        }
+      }
+
+      &__price {
+        text-align: left;
+        @extend %rubik-400;
+        font-size: 30px;
+        color: $color-text-focus;
+        line-height: 1.5;
+
+        @include r($w767) {
+          font-size: 24px;
+         }
+      }
+  
+      &__nav {
+        bottom: 150px;
+      }
+
+      &__star {
+        display: block;
+        margin-bottom: 30px;
+
+        @include r($w767) {
+          margin-bottom: 20px;
+         }
+      }
+
+      &__content-box {
+        display: block;
+      }
+
+      &__text {
+        @include r($w767) {
+          line-height: 1.4;
+         }
+
+         @include r($w575) {
+          margin-bottom: 20px;
+         }
+      }
+
+      &__wrapper-box {
+        padding: 45px 7px 70px 40px;
+
+        @include r($w767) {
+          padding: 5px 7px 5px 20px;
+        }
+      }
+
+      &__nav {
+        @include r($w767) {
+          bottom: 25px;
+         }
+      }
+    }
+  }
+
+  .product-card__nav {
+    .product-card__item--search {
+      display: none;
+    }
+  }
+
+  &__img-box {
+    height: 290px; //  здесь ставить высоту!
+    overflow: hidden;
+    //padding-top: 35px;
+    margin-bottom: 5px;
+    //margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__img {
+    max-width: 270px;
+    width: 100%;
+    height: 290px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 16px;
+    @extend %dmsans-500;
+    color: $color-title;
+    line-height: 1.5;
+    text-align: center;
+    @include line-clamp(1);
+  }
+
+  &__price {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $color-products-price;
+    line-height: 2.5;
+    text-align: center;
+  }
+
+  &__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    width: 168px;
+    height: 46px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: -1;
+    transition: z-index 1.5s;
+
+    @include r($w767) {
+      z-index: 1;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    outline: 1px solid transparent;
+
+    &:focus {
+      outline-color: #000;
+    }
+
+    &:hover {
+      background-color: $color-user-nav-link;
+
+      .product-card__svg {
+        fill: $color-user-nav-link-hover;
+      }
+    }
+
+    &:active {
+      outline-color: #ccc;
+    }
+  }
+
+  &__svg {
+    fill: $color-user-nav-link;
+    transition: fill 0.5s;
+
+    &--search {
+      width: 15px;
+      height: 15px;
+    }
+
+    &--cart {
+      width: 19px;
+      height: 17px;
+    }
+
+    &--heart {
+      width: 18px;
+      height: 16px;
+    }
+  }
+
+  &__text {
+    @extend %rubik-400;
+    color: $color-title;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    @include line-clamp(3);
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 17px 50px;
+  }
+}

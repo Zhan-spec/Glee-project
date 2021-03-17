@@ -1,0 +1,148 @@
+.comments {
+  &__title {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $color-default;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 70px;
+    @include r($w767) {
+      margin-bottom: 50px;
+     }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    @include r($w575) {
+      flex-direction: column;
+    }
+  }
+
+  &__item:nth-child(even) {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 130px;
+    @include r($w991) {
+      padding-left: 0;
+     }
+  }
+
+  &__link-img {
+    min-width: 100px;
+    margin-right: 30px;
+    cursor: pointer;
+
+    @include r($w575) {
+      margin: 0 auto 25px;
+    }
+  }
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include r($w575) {
+     flex-direction: column;
+    }
+  }
+
+  &__content-name {
+    @extend %rubik-700;
+    color: $color-default;
+    @include r($w575) {
+      margin-bottom: 15px;
+     }
+  }
+
+  &__content-date {
+    font-size: 14px;
+    color: #9e9e9e;
+  }
+
+  &__content-text {
+    color: #565872;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    @include r($w575) {
+      line-height: 1.4;
+     }
+  }
+
+  &__content-replay {
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+    font-size: 14px;
+    color: #526278;
+
+    &::after {
+      content: '';
+      width: 16px;
+      height: 17px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
+      background-image: url('../images/icons/icon-blog-arrow-right.svg');
+
+      filter: invert(38%) sepia(5%) saturate(2162%) hue-rotate(175deg) brightness(95%) contrast(90%);
+
+    }
+
+    &:focus {
+      outline: 1px solid #000;
+      color: $color-text-focus;
+
+      &::after {
+        filter: invert(10%) sepia(6%) saturate(42%) hue-rotate(314deg) brightness(101%) contrast(76%);
+      }
+    }
+
+    &:hover {
+      color: $color-text-hover;
+      outline: 1px solid $color-text-hover;
+
+      &::after {
+        filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
+      }
+    }
+
+    &:active {
+      color: $color-text-focus;
+
+      &::after {
+        filter: invert(22%) sepia(91%) saturate(0%) hue-rotate(210deg) brightness(90%) contrast(114%);
+      }
+    }
+  }
+
+  &__form {
+    &.feedback {
+      @include r($w1199) {
+        max-width: 830px;
+        margin: 0 auto;
+      }      
+    }
+    .feedback {
+      &__wrap {
+        &--name {
+          @include r($w991) {
+           margin-right: 5px;
+          }   
+        }
+      }
+    }
+  }
+}

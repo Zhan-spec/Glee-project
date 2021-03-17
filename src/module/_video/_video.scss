@@ -1,0 +1,50 @@
+.video {
+  margin-bottom: 50px;
+
+  @include r($w575) {
+    display: none;
+  }
+
+  &__inner {
+    max-width: 1920px;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+
+    @include r($w1199) {
+      height: 320px;
+    }
+
+    @include r($w991) {
+      height: 250px;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover svg {
+      transform: scale(1.2);
+    }
+
+    @include r($w1199) {
+      height: 320px;
+    }
+
+    @include r($w991) {
+      height: 250px;
+    }
+  }
+
+  &__svg {
+    width: 127px;
+    height: 127px;
+  }
+}

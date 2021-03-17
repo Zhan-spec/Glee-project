@@ -1,0 +1,108 @@
+.about {
+  padding: 120px 0;
+
+  @include r($w767) {
+    padding: 75px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($w1199) {
+      display: block;
+    }
+  }
+
+  &__img {
+    max-width: 570px;
+    width: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+
+    @include r($w1199) {
+      max-width: 70%;
+      margin: 0 auto 40px;
+    }
+
+    @include r($w767) {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+    padding: 80px 0;
+
+    @include r($w1199) {
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    @include r($w767) {
+      max-width: 100%;
+    }
+  }
+
+  &__expirience {
+    display: flex;
+    align-items: center;
+
+    @include r($w575) {
+      justify-content: center;
+    }
+  }
+
+  &__expirience-num {
+    display: block;
+    @extend %rubik-700;
+    font-size: 140px;
+    color: $bgc-btn;
+    margin-right: 30px;
+
+    @include r($w575) {
+      font-size: 100px;
+    }
+  }
+
+  &__expirience-info {
+    padding-top: 25px;
+
+    @include r($w575) {
+      padding-top: 0;
+    }
+
+    span {
+      display: block;
+      line-height: 1.9;
+      color: $color-title;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: left;
+
+    @include r($w575) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: $color-title;
+    line-height: 1.9;
+    margin-bottom: 65px;
+
+    @include r($w575) {
+      line-height: 1.4;
+    }
+  }  
+
+  &__info {
+    border-top: 2px solid #e6eaf0;
+    padding-top: 30px;
+  }
+}

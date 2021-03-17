@@ -1,0 +1,280 @@
+.footer {
+  padding: 80px 0 35px;
+  font-size: 14px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__col {
+    &-contact {
+      max-width: 200px;
+      width: 100%;
+      margin-right: 100px;
+
+      @include r($w1199) {
+        margin-right: 50px;
+      }
+
+      @include r($w991) {
+        margin-right: 10px;
+      }
+
+      @include r($w575) {
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    &-form {
+      max-width: 270px;
+      width: 100%;
+      padding-top: 5px;
+
+      @include r($w991) {
+        max-width: 100%;
+
+        .footer__title {
+          margin-bottom: 0;
+        }
+      }
+
+      @include r($w575) {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+    }
+
+    &-nav {
+      width: 145px;
+      margin-right: 155px;
+      padding-top: 5px;
+
+      @include r($w1199) {
+        margin-right: 50px;
+      }
+
+      @include r($w991) {
+        margin-right: 10px;
+      }
+
+      @include r($w575) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 27px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    color: $color-footer-title;
+    font-size: 16px;
+    line-height: 2.8;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+
+    @media (max-width: 575px) {
+      margin-bottom: 0;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+
+
+    &-nav {
+      @include r($w575) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__item {
+
+    @include r($w575) {
+      text-align: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 14px;
+    transition: color 0.5s;
+
+    &:focus {
+      color: $color-title-link-focus;
+    }
+
+    &:hover {
+      color: $color-title-link-hover;
+    }
+
+    &:active {
+      color: $color-title-link-active;
+    }
+
+    @include r($w575) {
+      margin-bottom: 8px;
+      text-align: center;
+      padding: 5px 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    @include r($w991) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__form-input {
+    max-width: 170px;
+    width: 100%;
+    background-color: $bgc-block;
+    border: none;
+    padding: 10px 10px 9px 15px;
+    border-bottom: 2px solid transparent;
+    outline: 1px solid transparent;
+    margin-right: -5px;
+    transition: color 0.5s border-bottom 0.5s outline 0.5s;
+
+    &::placeholder {
+      color: #234969;
+      font-size: 12px;
+    }
+
+    &:focus {
+      border-bottom: 2px solid #000;
+      outline: transparent;
+    }
+
+    &:hover {
+      outline-color: #000;
+    }
+
+    &:active {
+      outline-color: #ccc;
+    }
+
+    @include r($w991) {
+      max-width: 240px;
+    }
+
+    @include r($w575) {
+      max-width: 100%;
+    }
+  }
+
+  &__form-btn {
+    padding: 10px 18px;
+
+    &:focus {
+      outline: 1px solid #ccc;
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+
+    &:active {
+      background-color: #ccc;
+    }
+
+    @include r($w575) {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($w767) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__menu {
+    @include r($w767) {
+      margin-bottom: 25px;
+    }
+
+    .menu {
+      &__list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__link {
+        padding: 10px 11px;
+        display: block;
+
+        border-bottom: 1px solid transparent;
+        transition: color 0.5s, border-bottom-color 0.5s;
+
+        &:focus {
+          color: $color-text-hover;
+          border-bottom-color: $color-text-focus
+        }
+
+        &:hover {
+          color: $color-text-hover;
+          border-bottom-color: $color-text-hover;
+        }
+
+        &:active,
+        &--active {
+          color: $color-text-hover;
+          border-bottom-color: $color-text-active;
+        }
+
+
+
+      }
+
+      &__item {
+        position: relative;
+
+        &:not(:last-child) {
+          margin-right: 0;
+
+          &::after {
+            content: '';
+            width: 1px;
+            height: 16px;
+            background-color: #7b7b7b;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+          }
+        }
+
+        &:last-child {
+          .menu__link {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__copy {
+    @include r($w767) {
+      text-align: center;
+    }
+  }
+}
