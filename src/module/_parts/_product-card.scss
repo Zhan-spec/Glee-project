@@ -26,8 +26,12 @@
     min-width: 100%;
     flex-direction: row;
     padding-bottom: 0;
-
-    .product-card {
+    
+    @include r($w575) {
+      display: block;
+    }
+    
+    .product-card {      
 
       &__img-box {
         height: 500px;
@@ -35,29 +39,27 @@
         background-color: #fefefe;
         border: 2px solid #f2f2f2;
         margin-bottom: 0;
+
+        @include r($w767) {
+          height: 350px;
+          min-width: 290px;
+        }
+        @include r($w575) {
+         margin-bottom: 20px;
+        }
       }
 
       &__img {
         height: 500px;
+
+        @include r($w767) {
+          height: 275px;
+        }
       }
 
       &__link {
         border-radius: 0;
         border: 1px solid $bgc-btn;
-      }
-
-      &__star {
-        display: block;
-        margin-bottom: 30px;
-      }
-
-      &__content-box {
-        display: block;
-      }
-
-      &__wrapper-box {
-        padding: 45px 7px 70px 40px;
-
       }
 
       &__title {
@@ -67,6 +69,10 @@
         color: $color-text-focus;
         margin-bottom: 15px;
         @include line-clamp(1);
+
+        @include r($w767) {
+         font-size: 28px;
+        }
       }
 
       &__price {
@@ -75,20 +81,59 @@
         font-size: 30px;
         color: $color-text-focus;
         line-height: 1.5;
-      }
 
+        @include r($w767) {
+          font-size: 24px;
+         }
+      }
+  
       &__nav {
         bottom: 150px;
       }
 
-    }
+      &__star {
+        display: block;
+        margin-bottom: 30px;
 
-    .product-card__nav {
-      .product-card__item--search {
-        display: none;
+        @include r($w767) {
+          margin-bottom: 20px;
+         }
+      }
+
+      &__content-box {
+        display: block;
+      }
+
+      &__text {
+        @include r($w767) {
+          line-height: 1.4;
+         }
+
+         @include r($w575) {
+          margin-bottom: 20px;
+         }
+      }
+
+      &__wrapper-box {
+        padding: 45px 7px 70px 40px;
+
+        @include r($w767) {
+          padding: 5px 7px 5px 20px;
+        }
+      }
+
+      &__nav {
+        @include r($w767) {
+          bottom: 25px;
+         }
       }
     }
+  }
 
+  .product-card__nav {
+    .product-card__item--search {
+      display: none;
+    }
   }
 
   &__img-box {
@@ -160,7 +205,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
+    border: 1px solid #ccc;
     transition: background-color 0.5s;
     cursor: pointer;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);

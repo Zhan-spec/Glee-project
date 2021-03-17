@@ -3,122 +3,244 @@
 
   &__inner {
     display: flex;
+    position: relative;
+
+    @include r($w1199) {
+      display: block;
+    }
   }
 
   &__filters {
     max-width: 270px;
     width: 100%;
     margin-right: 30px;
-  }
-}
 
-.product-content {
-  width: 100%;
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 70px;
-
-    .products__item {
-      margin-bottom: 40px;
+    @include r($w1199) {
+      max-width: 100%;
+      margin-right: 0;
+      //display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      background-color: #ccc;
+      z-index: 100;
     }
-  }
-
-  &__filter {
-    border: 1px solid $bgc-block;
-    padding: 20px 25px 20px 30px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__filter-buttons {
-    display: flex;
-    align-items: center;
-  }
-
-  &__filter-btn {
-    border: none;
-    padding: 0;
-    outline: transparent;
-    margin-left: 15px;
-    background-color: transparent;
-    line-height: 0;
-    cursor: pointer;
-
-    &.product-content__filter-btn--active,
-    &:hover {
-      path {
-        fill: $color-title;
+    .filter {
+      &__btn {
+        width: 20px;
+        height: 20px;
       }
     }
   }
 
-  &__filter-selects {
-    padding-top: 7px;
-  }
 
-  &__fiter-sort {
-    .jq-selectbox__dropdown {
-      width: 200px;
+  .product {
+    &__filter-btn {
+      display: none;
+      border: none;
+      width: 60px;
+      height: 60px;
+      background-color: $bgc-btn;
+      // position: fixed;
+      // right: 0;
+      // bottom: 50px;
+      position: absolute;
+      left: 0;
+      top: -60px;
+      z-index: 101;
+
+      @include r($w1199) {
+        display: block;
+      }
+
+      .filter {
+        &__btn {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+
+
+      // &__filters {
+      //   min-width: 270px;
+      //   width: 100%;
+      //   margin-right: 30px;
+
+      //   @include r($w1199) {
+      //     max-width: 100%;
+      //     margin-right: 0;
+      //     //display: none;
+      //     position: absolute;
+      //     top: 20px;
+      //     left: 0;
+      //     background-color: #fff;
+      //     z-index: 100;
+      //   }
+      //   .filter {
+      //     &__btn {
+      //       width: 20px;
+      //       height: 20px;
+      //     }
+      //   }
+      // }
     }
   }
 
-  &__fiter-show {}
-}
+  .product-content {
+    width: 100%;
 
-.jq-selectbox__select {
-  height: 32px;
-  padding: 0 30px 0 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  text-shadow: none;
-  margin-right: 35px;
-  @extend %dmsans-500;
-  font-size: 16px;
-  color: $color-title-products;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
 
-  &:hover {
-    background-color: transparent;
+
+
+
+      .products {
+        &__content {
+          @include r($w1199) {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+          }
+
+          @include r($w767) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          @include r($w575) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+
+        &__content-nogrid {
+          display: flex;
+        }
+
+        &__item {
+          margin-bottom: 40px;
+
+          @include r($w1199) {
+            max-width: 100%;
+          }
+
+        }
+
+
+
+      }
+
+
+
+
+    }
+
+    &__filter {
+      border: 1px solid $bgc-block;
+      padding: 20px 25px 20px 30px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include r($w767) {
+        padding-left: 25px;
+      }
+    }
+
+    &__filter-buttons {
+      display: flex;
+      align-items: center;
+
+      @include r($w767) {
+        display: none;
+      }
+    }
+
+    &__filter-btn {
+      border: none;
+      padding: 0;
+      outline: transparent;
+      margin-left: 15px;
+      background-color: transparent;
+      line-height: 0;
+      cursor: pointer;
+
+      &.product-content__filter-btn--active,
+      &:hover {
+        path {
+          fill: $color-title;
+        }
+      }
+    }
+
+    &__filter-selects {
+      padding-top: 7px;
+    }
+
+    &__fiter-sort {
+      .jq-selectbox__dropdown {
+        width: 200px;
+      }
+    }
+
+    &__fiter-show {}
   }
-}
 
-// .jq-selectbox__dropdown {  
-//   width: 200px;
-// }
+  .jq-selectbox__select {
+    height: 32px;
+    padding: 0 30px 0 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+    margin-right: 35px;
+    @extend %dmsans-500;
+    font-size: 16px;
+    color: $color-title-products;
 
-.jq-selectbox__select-text {
-  // @extend %dmsans-500;
-  // font-size: 16px;
-  // color: $color-title-products;
-}
+    &:hover {
+      background-color: transparent;
+    }
+  }
 
-.jq-selectbox__trigger {
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // width: 34px;
-  // height: 100%;
-  border-left: none;
-}
+  // .jq-selectbox__dropdown {  
+  //   width: 200px;
+  // }
 
-.jq-selectbox__trigger-arrow {
-  position: absolute;
-  top: 10px;
-  right: 8px;
-  width: 10px;
-  height: 5px;
-  // border-top: 5px solid #999;
-  // border-right: 5px solid transparent;
-  // border-left: 5px solid transparent;
-  background-image: url('../../images/icons/icon-angle-down.svg');
-}
+  .jq-selectbox__select-text {
+    // @extend %dmsans-500;
+    // font-size: 16px;
+    // color: $color-title-products;
+  }
 
-.jq-selectbox li.selected,
-.jq-selectbox li:hover {
-  background-color: #edf1f4;
-  color: $color-title;
+  .jq-selectbox__trigger {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // width: 34px;
+    // height: 100%;
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    width: 10px;
+    height: 5px;
+    // border-top: 5px solid #999;
+    // border-right: 5px solid transparent;
+    // border-left: 5px solid transparent;
+    background-image: url('../../images/icons/icon-angle-down.svg');
+  }
+
+  .jq-selectbox li.selected,
+  .jq-selectbox li:hover {
+    background-color: #edf1f4;
+    color: $color-title;
+  }
 }

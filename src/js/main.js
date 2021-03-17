@@ -13,6 +13,10 @@ $(function() {
   //         }
   // });
 
+  $('.product__filter-btn').on('click', function() {
+    $('.product__filters').slideToggle();
+  });
+
 
   $('.tabs__link').on('click', function (e) {
     e.preventDefault();
@@ -62,14 +66,20 @@ $(function() {
     $(this).addClass('pagination__item--active');
   });
 
+  // переключение вида карточек в файле product-list.html
   $('.button-grid').on('click', function () {
     $('.products__item').removeClass('products__item--list');
     $('.product-card').removeClass('product-card--list');    
+
+    $('.products__content').removeClass('products__content-nogrid'); 
   });
 
   $('.button-list').on('click', function () {
     $('.products__item').addClass('products__item--list');
-    $('.product-card').addClass('product-card--list');    
+    $('.product-card').addClass('product-card--list');   
+    
+    $('.products__content').addClass('products__content-nogrid'); 
+
   });
 
   $('.product-content__filter-btn').on('click',function () {
@@ -82,7 +92,6 @@ $(function() {
 
   $('.product-content__filter-btn').on('click', function(e) {
     e.preventDefault();
-
     $('.product-content__filter-btn').removeClass('product-content__filter-btn--active');
     $(this).addClass('product-content__filter-btn--active');
 

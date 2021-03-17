@@ -121,6 +121,7 @@
   @include r($w575) {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0;
   }
 
   .slick-vertical .slick-slide {
@@ -137,8 +138,9 @@
     }
 
     @include r($w575) {
-      margin-right: 0;
-      max-width: 100%;
+      // margin-right: 0;
+      // max-width: 100%;
+      display: none;
     }
   }
 
