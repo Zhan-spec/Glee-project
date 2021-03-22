@@ -279,3 +279,54 @@
     }
   }
 }
+
+.topmenu {
+  position: relative;
+  display: inline-block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  z-index: 999;
+  background-color: #a3bbc8;
+
+  &__item {
+    border: 1px solid #ccc;
+
+    &:hover {
+      opacity: 0.5;
+      border: 1px solid #000;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 5px 0 5px 3px;
+    color: #fff;
+
+    &:focus {
+      color: $color-text-hover;
+      border-bottom-color: $color-text-focus
+    }
+
+    &:hover {
+      color: $color-text-hover;
+      border-bottom-color: $color-text-hover;
+    }
+
+    &:active {
+      color: $color-text-hover;
+      border-bottom-color: $color-text-active;
+    }
+
+
+  }
+}
+
+.topmenu:hover .submenu {
+  display: block;
+}
