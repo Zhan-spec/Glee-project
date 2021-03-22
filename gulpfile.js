@@ -148,7 +148,8 @@ exports.fileInclude = fileInclude;
 
 //для выполнения только builda в каталог dist раскоментировать строку ниже и запустить 
 //вместо конанды gulp - команду gulp build
-//exports.build = build;   /*  если запускаем build сразу для удаления dist, сжатия картинок и копирования файлов из src в dist то используем build с series*/
+//exports.build = build;   //  если запускаем build сразу для удаления dist, 
+                          //сжатия картинок и копирования файлов из src в dist то используем build с series
 
 
 

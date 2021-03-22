@@ -282,7 +282,8 @@
 
 .topmenu {
   position: relative;
-  display: inline-block;
+  //display: inline-block;
+  display: block;
 }
 
 .submenu {
@@ -294,36 +295,40 @@
   z-index: 999;
   background-color: #a3bbc8;
 
+  @include r($w991) {
+    width: 90%;
+    left: 50%;    
+    transform: translateX(-50%);
+    transition: color 0.5s border 0.5s;    
+  }
+
   &__item {
     border: 1px solid #ccc;
 
-    &:hover {
-      opacity: 0.5;
+    &:hover {     
       border: 1px solid #000;
     }
   }
 
   &__link {
-    display: block;
-    padding: 5px 0 5px 3px;
+    display: block;    
+    padding: 20px 0 20px 3px;
     color: #fff;
 
     &:focus {
       color: $color-text-hover;
-      border-bottom-color: $color-text-focus
+      border: $color-text-focus;
     }
 
     &:hover {
       color: $color-text-hover;
-      border-bottom-color: $color-text-hover;
+      border: $color-text-hover;
     }
 
     &:active {
       color: $color-text-hover;
-      border-bottom-color: $color-text-active;
+      border: $color-text-active;
     }
-
-
   }
 }
 
