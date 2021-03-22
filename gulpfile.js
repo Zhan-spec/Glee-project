@@ -10,27 +10,6 @@ const rename        = require('gulp-rename');
 const del           = require('del');
 const browserSync   = require('browser-sync').create();
 const svgSprite     = require('gulp-svg-sprite');
-// const fileinclude   = require('gulp-file-include');  // для настройки модульности с gulp-file-include
-
-
-// function includeHTML() { // для настройки модульности с gulp-file-include
-//   return src([
-//     //'./src/html/**/*.html', 
-//     //'!./src/html/parts/*.html',    //ignore
-//     //'!./src/html/pages/*.html'     //ignore
-
-
-//     './src/module/**/*.html', 
-//     '!./src/module/parts/*.html',    //ignore
-//     '!./src/module/pages/*.html'     //ignore
-//     ])
-//     .pipe(fileinclude({
-//       prefix: '@@',
-//       basepath: '@file'
-//     }))
-//     .pipe(dest('./src'))
-//     .pipe(browserSync.stream());
-// }
 
 function fileInclude() {
   //return src('./src/html/*.html', '!./src/html/parts/*.html')
@@ -120,10 +99,14 @@ function images() {
 function build() {
   return src([
     //'src/**/*.html',  // строка до добавления gulp-file-include
-    'src/module/*.html',  // строка после добавления gulp-file-include  // для настройки модульности с gulp-file-include
+    //'src/module/*.html',  // строка после добавления gulp-file-include  // для настройки модульности с gulp-file-include
+    'src/*.html',
     //'src/css/style.min.css', // строка до добавления gulp-file-include
     'src/css/*.min.css', // строка после добавления gulp-file-include
-    'src/js/main.min.js'
+    'src/js/main.min.js',
+    'src/favicons/*.*',
+    'src/fonts/*.*'
+    //'src/images/**/*.*'
   ], {base: 'src'})
   .pipe(dest('dist'))
 }
@@ -162,6 +145,9 @@ exports.watching = watching;  /* для запуска function watching */
 exports.images = images;
 exports.fileInclude = fileInclude;
 //exports.includeHTML = includeHTML;
+
+//для выполнения только builda в каталог dist раскоментировать строку ниже и запустить 
+//вместо конанды gulp - команду gulp build
 //exports.build = build;   /*  если запускаем build сразу для удаления dist, сжатия картинок и копирования файлов из src в dist то используем build с series*/
 
 
