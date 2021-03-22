@@ -19,7 +19,7 @@ $(function() {
 
 
   $('.tabs__link').on('click', function (e) {
-    e.preventDefault();
+    //e.preventDefault();
 
     $('.tabs__link').removeClass('tabs__link--active');
     $(this).addClass('tabs__link--active');
@@ -91,7 +91,7 @@ $(function() {
 
 
   $('.product-content__filter-btn').on('click', function(e) {
-    e.preventDefault();
+    //e.preventDefault();
     $('.product-content__filter-btn').removeClass('product-content__filter-btn--active');
     $(this).addClass('product-content__filter-btn--active');
 
@@ -132,7 +132,7 @@ $(function() {
   });
 
   $('.menu__link').on('click', function(e) {
-    e.preventDefault();
+    //e.preventDefault();
 
     $('.menu__link').removeClass('menu__link--active');
     $(this).addClass('menu__link--active');
